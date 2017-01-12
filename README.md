@@ -57,4 +57,9 @@ Tyler's Information
 Email -> tyler.becker@selu.edu
 Availability -> Mon/Wed After 3 | Th After 12 | Fridays by request (only after 4) | Email Whenever
 
+Christian's Information
+Email -> christian.gonzales@selu.edu
+Availability -> Mon/Wed 12:30 - 3:30 | Thursdays by request | Email Whenever
+
+
 Whoever Elses information....
