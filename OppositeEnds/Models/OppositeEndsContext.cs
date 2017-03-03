@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Data.Entity;
 
 namespace OppositeEnds.Models
 {
@@ -20,6 +16,7 @@ namespace OppositeEnds.Models
         }
 
         public System.Data.Entity.DbSet<OppositeEnds.Models.User> Users { get; set; }
-    
+
+        public System.Data.Entity.DbSet<OppositeEnds.Models.Floral> Florals { get; set; }
     }
 }

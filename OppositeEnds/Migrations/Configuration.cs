@@ -1,9 +1,7 @@
 namespace OppositeEnds.Migrations
 {
-    using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
+    using System.Web.Helpers;
 
     internal sealed class Configuration : DbMigrationsConfiguration<OppositeEnds.Models.OppositeEndsContext>
     {
@@ -18,7 +16,7 @@ namespace OppositeEnds.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
-            //
+            //B
             //    context.People.AddOrUpdate(
             //      p => p.FullName,
             //      new Person { FullName = "Andrew Peters" },
@@ -26,6 +24,10 @@ namespace OppositeEnds.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            context.Users.AddOrUpdate(u => u.FirstName,
+                new Models.User {FirstName="AdminFirstName", LastName="AdminLastName",UserName="admin", Email="admin@gmail.com", Password= "admin", ConfirmPassword= "admin", verified=false });
+
         }
     }
 }

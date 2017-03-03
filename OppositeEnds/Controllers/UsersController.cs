@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using OppositeEnds.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
-using System.Web.Mvc;
-using OppositeEnds.Models;
 using System.Web.Helpers;
-using System.Web.Security;
+using System.Web.Mvc;
 
 namespace OppositeEnds.Controllers
 {
@@ -82,9 +77,15 @@ namespace OppositeEnds.Controllers
 
                 User doesUserExist = db.Users.FirstOrDefault(s => s.UserName.Equals(userTryingToLogin.UserName));
 
-                bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
-                if (a == true)
+                //bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
+                //if (a == true)
+                //{
+                //}
+                if(userTryingToLogin.Password == doesUserExist.Password)
                 {
+                    System.Web.Security.FormsAuthentication.SetAuthCookie(doesUserExist.Email, false);
+                    //return View("AdminDashBoard");
+                   return RedirectToAction("Index", "Users");
                 }
 
                 return View();

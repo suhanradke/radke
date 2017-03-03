@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link rel="stylesheet" href="~/Content/bootstrap.css">
-    <link rel="stylesheet" href="~/Content/site.css">
+    <link rel="stylesheet" href="~/Content/Site.css">
     <link rel="stylesheet" href="~/Content/login.css">
     <script src="~/Scripts/jquery-1.10.2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -46,7 +46,7 @@
         </div>
     </div>
     @*<div class="container body-content">*@
-        @RenderBody()
+       
 <body>
 <nav class="navbar navbar-default navbar-fixed-top ">
     <div class="container-fluid"  id="nav-fluid">
@@ -62,10 +62,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Florals</a></li>
-                <li><a href="#">Furniture</a></li>
-                <li><a href="#" >Sign in</a></li>
+                @Html.Partial("_LoginPartial")
             </ul>
            
            
@@ -73,6 +70,12 @@
         </div>
     </div>
 </nav>
+    <br/>
+    <br/>
+    <br />
+    <br />
+    @RenderBody()
+
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>

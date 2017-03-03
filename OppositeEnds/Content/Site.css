@@ -71,7 +71,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 
 body {
-    background-image: url('../Images1/full.jpeg');
+    /*background-image: url('../Images1/full.jpeg');*/
 }
 
 /*.navbar-right {
@@ -148,4 +148,9 @@ div#bs-example-navbar-collapse-1 {
 
 ul.nav.navbar-nav.navbar-right {
     padding-top: 35px;
+}
+
+
+.floral-index{
+    background: red;
 }
