@@ -169,3 +169,4 @@ C:\Users\Shiva\OneDrive\Documents\team3\OurLatestProject\OppositeEnds\obj\Debug\
 C:\Users\Shiva\OneDrive\Documents\team3\OurLatestProject\OppositeEnds\obj\Debug\OppositeEnds.dll
 C:\Users\Shiva\OneDrive\Documents\team3\OurLatestProject\OppositeEnds\obj\Debug\OppositeEnds.pdb
 C:\Users\Shiva\OneDrive\Documents\team3\OurLatestProject\OppositeEnds\obj\Debug\OppositeEnds.Migrations._try.resources
+C:\Users\Shiva\OneDrive\Documents\team3\OurLatestProject\OppositeEnds\obj\Debug\OppositeEnds.csprojResolveAssemblyReference.cache
