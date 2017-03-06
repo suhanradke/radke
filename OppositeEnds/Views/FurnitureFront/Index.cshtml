@@ -1,7 +1,28 @@
-﻿
+﻿@model  IEnumerable<OppositeEnds.Models.Furniture>
+ 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Furnitures";
 }
 
-<h2>Index</h2>
 
+<div class="col-xs-12 col-md-9">
+    <div class="row">
+        @foreach (var furnitures in Model)
+            {
+            <div class="col-xs-12 col-md-3">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
+                    <div class="caption text-center">
+                        <p>
+                            <b>Name:</b> <span> @furnitures.Name</span>
+                        </p>
+                        <p>
+                            <b>Price:</b> <span>@furnitures.Price USD</span>
+                        </p>
+                       
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
