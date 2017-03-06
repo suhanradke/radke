@@ -165,6 +165,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FloralsController.cs" />
+    <Compile Include="Controllers\FurnitureFrontController.cs" />
+    <Compile Include="Controllers\FurnituresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -183,13 +185,19 @@
     <Compile Include="Migrations\201703030644205_try.Designer.cs">
       <DependentUpon>201703030644205_try.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703050734365_FurnitureCRUD.cs" />
+    <Compile Include="Migrations\201703050734365_FurnitureCRUD.Designer.cs">
+      <DependentUpon>201703050734365_FurnitureCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floral.cs" />
+    <Compile Include="Models\Furniture.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OppositeEndsContext.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\VIntage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -287,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703030644205_try.resx">
       <DependentUpon>201703030644205_try.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703050734365_FurnitureCRUD.resx">
+      <DependentUpon>201703050734365_FurnitureCRUD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
