@@ -18,5 +18,7 @@ namespace OppositeEnds.Models
         public System.Data.Entity.DbSet<OppositeEnds.Models.User> Users { get; set; }
 
         public System.Data.Entity.DbSet<OppositeEnds.Models.Floral> Florals { get; set; }
+
+        public System.Data.Entity.DbSet<OppositeEnds.Models.Furniture> furnitures { get; set; }
     }
 }
