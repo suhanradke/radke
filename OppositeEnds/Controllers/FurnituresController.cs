@@ -17,7 +17,7 @@ namespace OppositeEnds.Controllers
         // GET: Furnitures
         public ActionResult Index()
         {
-            return View(db.Furnitures.ToList());
+            return View(db.furnitures.ToList());
         }
 
         // GET: Furnitures/Details/5
@@ -27,7 +27,7 @@ namespace OppositeEnds.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = db.furnitures.Find(id);
             if (furniture == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace OppositeEnds.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Furnitures.Add(furniture);
+                db.furnitures.Add(furniture);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace OppositeEnds.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = db.furnitures.Find(id);
             if (furniture == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace OppositeEnds.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Furniture furniture = db.Furnitures.Find(id);
+            Furniture furniture = db.furnitures.Find(id);
             if (furniture == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace OppositeEnds.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Furniture furniture = db.Furnitures.Find(id);
-            db.Furnitures.Remove(furniture);
+            Furniture furniture = db.furnitures.Find(id);
+            db.furnitures.Remove(furniture);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
