@@ -9,6 +9,7 @@ namespace OppositeEnds.Controllers
     public class FloralsController : Controller
     {
         private OppositeEndsContext db = new OppositeEndsContext();
+        private object _context;
 
         // GET: Florals
         public ActionResult Index()
@@ -118,6 +119,13 @@ namespace OppositeEnds.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        // GET: FloralFront
+
+        public ActionResult FloralFront()
+        {
+
+            return View();
         }
     }
 }
