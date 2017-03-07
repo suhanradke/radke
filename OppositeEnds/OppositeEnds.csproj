@@ -210,7 +210,15 @@
     <Content Include="Content\Images\Furnitures\f4.jpg" />
     <Content Include="Content\Images\Furnitures\f5.jpg" />
     <Content Include="Content\Images\Furnitures\f6.jpg" />
-    <Content Include="Content\Images\navrimages\12794508_762629533837893_1229437898244451512_n %281%29.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\12794508_762629533837893_1229437898244451512_n %281%29.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\antique-house.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\antiques.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\background color.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\beakfast menu.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\clockimage.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\granny%27s pie.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\specialcoffee.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\vintagecafelayout.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -223,6 +231,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Images" />
+    <Content Include="Content\Images\imagesforfrontend\SourceTree.lnk" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -289,6 +298,8 @@
     <Content Include="Views\Furnitures\Edit.cshtml" />
     <Content Include="Views\Furnitures\Index.cshtml" />
     <Content Include="Views\Shared\_AdminNavBody.cshtml" />
+    <Content Include="Views\Home\VintageIndex.cshtml" />
+    <None Include="Views\Vintage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

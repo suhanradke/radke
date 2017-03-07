@@ -26,5 +26,11 @@ namespace OppositeEnds.Controllers
 
             return View();
         }
+        public ActionResult VintageIndex()
+        {
+
+
+            return View();
+        }
     }
 }

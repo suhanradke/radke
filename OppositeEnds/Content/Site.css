@@ -70,3 +70,128 @@ h1.LogoName {
     padding-left: 15px;
 }
 
+.mad-carousel{
+    height:400px;
+    width:600px;
+  padding:0px 20px 0px 20px;
+
+
+}
+
+.open-hrs {
+    border: outset;
+    border-radius: 25px;
+    /*background-color:royalblue;*/
+    height: 50px;
+    font-family: Brush Script Std, Brush Script MT, cursive;
+    text-align: center;
+    background-image: url('Images/imagesforfrontend/background color.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.welcome{
+    font-size:45px;
+    font-family: Brush Script Std, Brush Script MT, cursive;
+    text-align:center;
+}
+.latte-de-cafe{
+    border-radius:20px;
+    height:30px;
+    border:outset;
+    text-align:center;
+    font-size:20px;
+    text-align:center;
+    font-style:italic;
+    color:royalblue;
+}
+.imgsize {
+    min-height:400px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    object-fit:cover;
+   
+}
+.vintage-page{
+    border-radius:15px;
+    border:outset;
+    text-align:center;
+    font-size:20px;
+    font-family:italic serif;
+    
+   
+
+}
+.vintage-cafe{
+    text-align:center;
+     font-family: Brush Script Std, Brush Script MT, cursive;
+    font-size:100px;
+
+}
+.hi{
+    margin:0px;
+    border:1px;
+}
+.marg{
+    margin:3% 20% auto;
+    position:initial;
+    border-radius:3px;
+    border:1px solid;
+}
+.hie{
+    top:50px;
+}
+
+.signinlogo{
+    font-size:20px;
+    text-align:center;
+
+}
+.centeralignment{
+    text-align:center;
+}
+.signindesign {
+    margin: 0px 10px 0px 10px;
+    padding: 40px 5px;
+    height: 300px;
+}
+
+
+.hemp{
+    border-bottom:1px solid;
+    border-bottom-color:darkgray;
+}
+.oppositeends {
+    font-family: Brush Script Std, Brush Script MT, cursive;
+    font-size: 40px;
+    padding-left: 2%; 
+    margin-bottom:0px;
+    color:maroon;
+    background-color:#efe3cb;
+}
+input#SignIn {
+    margin-right: 27%;
+    margin-left: 27%;
+}
+.picforsignin {
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0.8;
+    background-image: url('Images/imagesforfrontend/antique-house.jpg');
+}
+.manage{
+    margin:20px auto 40px auto;
+}
+.pad{
+    text-align:center;
+}
+.fullbgimg{
+     background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding:0px;
+}
