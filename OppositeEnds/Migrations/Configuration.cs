@@ -26,8 +26,19 @@ namespace OppositeEnds.Migrations
             //
 
             context.Users.AddOrUpdate(u => u.FirstName,
-                new Models.User {FirstName="AdminFirstName", LastName="AdminLastName",UserName="admin", Email="admin@gmail.com", Password= "admin", ConfirmPassword= "admin", verified=false });
-
+                new Models.User { FirstName = "AdminFirstName", LastName = "AdminLastName", UserName = "admin", Email = "admin@gmail.com", Password = "admin", ConfirmPassword = "admin", verified = false }); }
+           /* context.Florals.AddOrUpdate(x => x.Name, new Models.Floral {Name="item1",Price ="125"} )*/ 
         }
     }
-}
+
+//public int Id { get; set; }
+
+//public string Name { get; set; }
+
+//public double Price { get; set; }
+
+//public int Quantity { get; set; }
+
+//public string Category { get; set; }
+
+//public string Picture { get; set; }

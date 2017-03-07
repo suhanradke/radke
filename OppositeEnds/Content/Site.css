@@ -1,156 +1,72 @@
-﻿
-/* Set padding to keep content from hitting the edges */
-/*.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}*/
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+﻿.navbar-default {
+   background-color:rgb(72, 9, 18);
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+ul.nav.navbar-nav.navbar-right {
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
-/*.navbar {
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+    }
+
+@media (min-width: 768px) {
+    .navbar-header {
+            padding-left: 20px;
+                padding-top: 20px;
+    padding-bottom: 20px;
+
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    ul.nav.navbar-nav.navbar-right {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
+}
+ 
   
-    height: 50px;
-    margin-bottom: 5px;
-}*/
-
-/*.navbar-brand {
-    min-height: 500px;
-    font-family: 'Audiowide', cursive;
-    color: coral;
-    font-size: 45px;
-    padding-top: 30px;
-}*/
-a.navbar-brand {
-    min-height: 100px;
-    font-family: 'Homemade Apple', cursive;
-    color: rgba(117, 49, 24, 0.80);
-    font-size: 55px;
-    padding-top: 45px;
-    line-height: 1;
+   @media (min-width: 768px){
+.navbar-collapse .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
 }
 
-#nav-fluid {
-    min-height: 100px;
+    
 }
 
-/*.navbar-nav {
-    float: left;
-    margin: 0;
-    margin-left: 100px;
-}*/
-
-.navbar-nav > li > a {
-    color: rgb(251, 229, 229);
-    font-family: 'Oregano', cursive;
-    font-size: 20px;
+img#Logo {
+    width: 130px;
+}
+h1.LogoName {
+    display: inline-block;
 }
 
-.navbar-default .navbar-brand {
-    color: rgb(197, 183, 183);
-}
-
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    padding-top: 0px;
-    border: transparent;
-    background-color: rgba(90, 49, 49, 0.792157);
-    border: transparent;
-}
-
-nav.navbar.navbar-default.navbar-fixed-top {
-}
-
-body {
-    /*background-image: url('../Images1/full.jpeg');*/
-}
-
-/*.navbar-right {
-    float: right !important;
-    margin-right: -100px;
-}*/
-.navbar-brand {
-    float: left;
-    /* padding: 15px 15px; */
-    /* padding-bottom: 35px; */
-    font-size: 18px;
-    line-height: 0px;
-}
-
-.navbar {
-    position: relative;
-    z-index: 1000;
-    min-height: 50px;
-    margin-bottom: 20px;
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-}
-
-.navbar-default {
-    background-color: rgba(113, 67, 67, 0.521569);
-}
-
-.navbar-collapse {
-    width: auto;
-    border-top: 0;
-    border-top-width: 0px;
-    border-top-style: initial;
-    border-top-color: initial;
-    box-shadow: none;
-}
-
-.navbar-fixed-top, .navbar-fixed-bottom {
-    position: fixed;
-    right: 0;
-    left: 0;
-    border-width: 0 0 1px;
-    border-color: transparent;
-}
-
-div#bs-example-navbar-collapse-1 {
-    background-color: rgba(90, 49, 49, 0.22);
+h1.LogoName {
+    display: inline-block;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #fbe5e5;
+    color: white;
 }
 
-    .navbar-default .navbar-nav > li > a:hover {
-        color: #f7eded;
-        background-color: rgba(148, 148, 125, 0.88);
+@media (min-width: 768px) {
+    .navbar-header {
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 9px;
     }
-
-
-/*a.navbar-brand {
-    
-}*/
-
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    /* color: #5e5e5e; */
-    background-color: transparent;
-    color: #c5b7b7 !important;
 }
 
-
-ul.nav.navbar-nav.navbar-right {
-    padding-top: 35px;
+h1.LogoName {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 45px;
+    padding-left: 15px;
 }
 
-
-.floral-index{
-    background: red;
-}

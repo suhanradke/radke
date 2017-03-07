@@ -204,6 +204,13 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Furnitures\f1.jpg" />
+    <Content Include="Content\Images\Furnitures\f2.jpg" />
+    <Content Include="Content\Images\Furnitures\f3.jpg" />
+    <Content Include="Content\Images\Furnitures\f4.jpg" />
+    <Content Include="Content\Images\Furnitures\f5.jpg" />
+    <Content Include="Content\Images\Furnitures\f6.jpg" />
+    <Content Include="Content\Images\navrimages\12794508_762629533837893_1229437898244451512_n %281%29.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -275,6 +282,13 @@
     <Content Include="Views\Florals\Edit.cshtml" />
     <Content Include="Views\Florals\Index.cshtml" />
     <Content Include="Views\Users\AdminDashBoard.cshtml" />
+    <Content Include="Views\FurnitureFront\Index.cshtml" />
+    <Content Include="Views\Furnitures\Create.cshtml" />
+    <Content Include="Views\Furnitures\Delete.cshtml" />
+    <Content Include="Views\Furnitures\Details.cshtml" />
+    <Content Include="Views\Furnitures\Edit.cshtml" />
+    <Content Include="Views\Furnitures\Index.cshtml" />
+    <Content Include="Views\Shared\_AdminNavBody.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

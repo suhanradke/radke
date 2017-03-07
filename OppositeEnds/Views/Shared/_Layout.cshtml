@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="~/Content/Site.css">
     <link rel="stylesheet" href="~/Content/login.css">
     <script src="~/Scripts/jquery-1.10.2.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
 </head>
 @*<body>
@@ -48,7 +48,7 @@
     @*<div class="container body-content">*@
        
 <body>
-<nav class="navbar navbar-default navbar-fixed-top ">
+<nav class="navbar navbar-default">
     <div class="container-fluid"  id="nav-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -57,7 +57,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Opposite Ends</a>
+
+
+            
+           
+            <img id="Logo" src="~/Content/Images/navrimages/12794508_762629533837893_1229437898244451512_n (1).jpg" />
+            <h1 class="LogoName">Opposite Ends</h1>
+            @*<a class="navbar-brand" href="#"> Opposite Ends</a>*@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,12 +75,33 @@
             
         </div>
     </div>
-</nav>
-    <br/>
-    <br/>
-    <br />
-    <br />
-    @RenderBody()
+    </nav>
+
+    <div class="bodyContent">
+        <div class="row">
+    @if (Request.IsAuthenticated)
+            {
+            <div class="row">
+            <div class="col-sm-3" id="adminNav">
+                @Html.Partial("_AdminNavBody")
+                @*<h1>Head</h1>*@
+            </div>
+
+            <div class="col-sm-8">
+                @RenderBody()
+            </div>
+                </div>
+
+            }
+            else
+            {
+            <div class="col-sm-5">
+                @RenderBody()
+            </div>
+            }
+        </div>
+    </div>
+
 
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
