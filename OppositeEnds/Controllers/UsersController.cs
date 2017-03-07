@@ -81,14 +81,16 @@ namespace OppositeEnds.Controllers
                 //if (a == true)
                 //{
                 //}
-                if(userTryingToLogin.Password == doesUserExist.Password)
+                if (userTryingToLogin.Password == doesUserExist.Password)
                 {
                     System.Web.Security.FormsAuthentication.SetAuthCookie(doesUserExist.Email, false);
                     //return View("AdminDashBoard");
-                   return RedirectToAction("Index", "Users");
+                    return RedirectToAction("Index", "Users");
                 }
-
-                return View();
+                else
+                {
+                    return RedirectToAction("SignIn","Users");
+                }
             }
             return View();
 
