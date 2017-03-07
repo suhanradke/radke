@@ -48,13 +48,30 @@ h1.LogoName {
     display: inline-block;
 }
 
-h1.LogoName {
-    display: inline-block;
+@media (max-width: 768px) {
+    ul.nav.navbar-nav.navbar-right {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
 }
 
+
+
 .navbar-default .navbar-nav > li > a {
-    color: white;
+    color: #f1eec3;
 }
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #f5eaea;
+    background-color:#6b1f1f;
+}
+
 
 @media (min-width: 768px) {
     .navbar-header {
@@ -68,8 +85,25 @@ h1.LogoName {
     font-family: 'Cabin Sketch', cursive;
     font-size: 45px;
     padding-left: 15px;
+        color: #f1eec3;
 }
 
+
+/*footer CSS*/
+
+ #myFooter {
+	background-color: #373a48;
+	color:white;
+}
+
+#myFooter .footer-copyright{
+	background-color: #383737;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align: center;
+}
+
+<<<<<<< HEAD
 .mad-carousel{
     height:400px;
     width:600px;
@@ -195,3 +229,135 @@ input#SignIn {
     margin: 0px;
     padding:0px;
 }
+=======
+#myFooter .footer-copyright p{
+	margin:10px;
+	color: #ccc;
+}
+
+#myFooter ul{
+	list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#myFooter h5{
+	font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a{
+	color:#d2d1d1;
+	text-decoration: none;
+}
+
+#myFooter a:hover, #myFooter a:focus{
+	text-decoration: none;
+	color:white;
+}
+
+#myFooter .myCols{
+	text-align: center;
+}
+
+#myFooter .social-networks{
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 38px;
+}
+
+#myFooter .social-networks a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover{
+	text-decoration: none;
+
+}
+
+#myFooter .facebook:hover{
+	color:#0077e2;
+}
+
+#myFooter .google:hover{
+	color:#ef1a1a;
+}
+
+#myFooter .twitter:hover{
+	color: #00aced;
+}
+
+@media screen and (max-width: 767px){
+	#myFooter {
+		text-align: center;
+	}
+}
+
+
+/*Index Page*/
+
+#Start{
+    text-align:center;
+}
+
+#Greet{
+    font-family: 'Homemade Apple', cursive;
+    text-align:center;
+    font-size:55px;
+}
+#Welcome{
+    font-family: Oregano, cursive;
+    text-align:center;
+    font-size:35px;
+}
+
+@media screen and (min-width: 768px) {
+    .container .jumbotron {
+        padding-right: 60px;
+        padding-left: 60px;
+        background-color: #f1eec3;
+    }
+}
+
+
+.container .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+    background-color: #f1eec3;
+}
+@media screen and (max-width: 768px) {
+    .bodyContent {
+        padding-top: 50px;
+    }
+
+    .container .jumbotron {
+        min-height: 150px;
+    }
+}
+
+   
+     @media screen and (mix-width: 500px){
+    #Start{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .container .jumbotron {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+}
+
+
+
+
+
+>>>>>>> 42b3536d0f3b9f83252ac3276e9b5edfc5a7559c
