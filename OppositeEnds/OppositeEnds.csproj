@@ -297,9 +297,9 @@
     <Content Include="Views\Furnitures\Details.cshtml" />
     <Content Include="Views\Furnitures\Edit.cshtml" />
     <Content Include="Views\Furnitures\Index.cshtml" />
-    <Content Include="Views\Shared\_AdminNavBody.cshtml" />
     <Content Include="Views\Home\VintageIndex.cshtml" />
     <Content Include="Views\Florals\FloralFront.cshtml" />
+    <Content Include="Views\Shared\_AdminNavBody.cshtml" />
     <None Include="Views\Vintage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

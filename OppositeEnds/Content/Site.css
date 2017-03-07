@@ -359,5 +359,38 @@ input#SignIn {
 
 
 
+/*Admin Dashboard*/
+.sidebar-nav {
+    margin-top: -4%;
+    width: 90%;
+    background-color: #e3dbb4;
+    color: maroon;
+    height: 100%;
+}
 
->>>>>>> 42b3536d0f3b9f83252ac3276e9b5edfc5a7559c
+.model > ul, li, a {
+    color:maroon;
+}
+
+.navbar {
+    position: relative;
+    z-index: 1000;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+
+.bodyContent {
+    margin-top: 2%;
+}
+
+.row.ok {
+    margin-top: -1.92%;
+}
+
+h5#headAdmin {
+    font-family: 'Aldrich', sans-serif;
+    padding-top: 15px;
+    font: bold;
+}

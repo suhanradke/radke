@@ -85,7 +85,7 @@ namespace OppositeEnds.Controllers
                 {
                     System.Web.Security.FormsAuthentication.SetAuthCookie(doesUserExist.Email, false);
                     //return View("AdminDashBoard");
-                    return RedirectToAction("Index", "Users");
+                    return RedirectToAction("AdminDashBoard", "Users");
                 }
                 else
                 {
@@ -175,6 +175,9 @@ namespace OppositeEnds.Controllers
             return RedirectToAction("Index", "Home");
 
         }
-      
+        public ActionResult AdminDashBoard()
+        {
+            return View();
+        }
     }
 }
