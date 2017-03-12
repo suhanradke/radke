@@ -3,5 +3,33 @@
     ViewBag.Title = "FloralFront";
 }
 
+@model  IEnumerable<OppositeEnds.Models.Floral>
+
+@{
+    ViewBag.Title = "Florals";
+}
+
+
+<div class="col-xs-12 col-md-9">
+    <div class="row">
+        @foreach (var florals in Model)
+            {
+            <div class="col-xs-12 col-md-3">
+                <div class="thumbnail">
+                    <img class="img-responsive" src="~/Content/images/florals/@(florals.Picture).jpg">
+                    <div class="caption text-center">
+                        <p>
+                            <b>Name:</b> <span> @florals.Name</span>
+                        </p>
+                        <p>
+                            <b>Price:</b> <span>@florals.Price USD</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
 
 

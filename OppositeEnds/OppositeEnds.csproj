@@ -202,8 +202,19 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Carausel\breakfast1.jpg" />
+    <Content Include="Content\Images\Carausel\Breakfast2.jpg" />
+    <Content Include="Content\Images\Carausel\Breakfast3.jpg" />
+    <Content Include="Content\Images\Carausel\Carousel1.jpg" />
+    <Content Include="Content\Images\Carausel\Carousel2.jpg" />
+    <Content Include="Content\Images\Carausel\Carousel3.jpg" />
+    <Content Include="Content\Images\florals\florals1.JPG" />
+    <Content Include="Content\Images\florals\florals2.jpg" />
+    <Content Include="Content\Images\florals\florals3.jpg" />
+    <Content Include="Content\Images\florals\florals4.png" />
     <Content Include="Content\Images\Furnitures\f1.jpg" />
     <Content Include="Content\Images\Furnitures\f2.jpg" />
     <Content Include="Content\Images\Furnitures\f3.jpg" />
@@ -218,6 +229,7 @@
     <Content Include="Content\Images\imagesforfrontend\clockimage.jpg" />
     <Content Include="Content\Images\imagesforfrontend\granny%27s pie.jpg" />
     <Content Include="Content\Images\imagesforfrontend\specialcoffee.jpg" />
+    <Content Include="Content\Images\imagesforfrontend\vin1.jpg" />
     <Content Include="Content\Images\imagesforfrontend\vintagecafelayout.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="favicon.ico" />
@@ -297,9 +309,9 @@
     <Content Include="Views\Furnitures\Details.cshtml" />
     <Content Include="Views\Furnitures\Edit.cshtml" />
     <Content Include="Views\Furnitures\Index.cshtml" />
-    <Content Include="Views\Home\VintageIndex.cshtml" />
     <Content Include="Views\Florals\FloralFront.cshtml" />
     <Content Include="Views\Shared\_AdminNavBody.cshtml" />
+    <Content Include="Views\Home\VintageIndex.cshtml" />
     <None Include="Views\Vintage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>

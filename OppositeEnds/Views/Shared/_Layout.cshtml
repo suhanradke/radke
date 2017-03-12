@@ -50,33 +50,49 @@
     @*<div class="container body-content">*@
        
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid"  id="nav-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-
-            
-           
+    
+        @*<div class="navbar-image">
             <img id="Logo" src="~/Content/Images/imagesforfrontend/12794508_762629533837893_1229437898244451512_n (1).jpg" />
+            </div>
+        <div class="nav-bar text">
             <h1 class="LogoName">Opposite Ends</h1>
-            @*<a class="navbar-brand" href="#"> Opposite Ends</a>*@
-        </div>
+        </div>*@
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid" id="nav-fluid">
+                <div class="navbar-container">
+                    <div class="navbar-image">
+                        <img class="img-responsive" id="Logo" src="~/Content/Images/imagesforfrontend/12794508_762629533837893_1229437898244451512_n (1).jpg" />
+                    </div>
+                    <div class="nav-bar-text">
+                        <h1 class="LogoName">Opposite Ends</h1>
+                    </div>
+                    </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @*<div class="navbar-container">
+                <div class="navbar-image">
+                    <img id="Logo" src="~/Content/Images/imagesforfrontend/12794508_762629533837893_1229437898244451512_n (1).jpg" />
+                </div>
+                <div class="nav-bar-text">
+                    <h1 class="LogoName">Opposite Ends</h1>
+                </div>*@
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                @Html.Partial("_LoginPartial")
-            </ul>
-           
-           
-            
-        </div>
-    </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                @Html.Partial("_LoginPartial")
+                            </ul>
+
+
+                        </div>
+                    </div>
+                </div>
     </nav>
 
     <div class="bodyContent">
@@ -107,6 +123,8 @@
 
     <div class="content">
     </div>
+        </div>
+
     <footer id="myFooter">
         <div class="container">
             <div class="row">
