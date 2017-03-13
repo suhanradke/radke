@@ -189,6 +189,18 @@
     <Compile Include="Migrations\201703050734365_FurnitureCRUD.Designer.cs">
       <DependentUpon>201703050734365_FurnitureCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703131431134_validations.cs" />
+    <Compile Include="Migrations\201703131431134_validations.Designer.cs">
+      <DependentUpon>201703131431134_validations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703131537414_validations1.cs" />
+    <Compile Include="Migrations\201703131537414_validations1.Designer.cs">
+      <DependentUpon>201703131537414_validations1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703132051020_dbupdate.cs" />
+    <Compile Include="Migrations\201703132051020_dbupdate.Designer.cs">
+      <DependentUpon>201703132051020_dbupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floral.cs" />
@@ -336,6 +348,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703050734365_FurnitureCRUD.resx">
       <DependentUpon>201703050734365_FurnitureCRUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131431134_validations.resx">
+      <DependentUpon>201703131431134_validations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703131537414_validations1.resx">
+      <DependentUpon>201703131537414_validations1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703132051020_dbupdate.resx">
+      <DependentUpon>201703132051020_dbupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
