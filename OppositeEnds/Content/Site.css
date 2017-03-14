@@ -52,9 +52,16 @@ img#Logo {
     width: 130px;
 
 }
-}
+
+
+
+
 h1.LogoName {
     display: inline-block;
+   font-family: 'Amarante', cursive;
+    font-size: 90px;
+    padding-left: 15px;
+     color: #f1eec3;
         
 }
 
@@ -92,12 +99,7 @@ h1.LogoName {
     }
 }
 
-h1.LogoName {
-    font-family: 'Marck Script', cursive;
-    font-size: 90px;
-    padding-left: 15px;
-        color: #f1eec3;
-}
+
 
 
 /*footer CSS*/
@@ -351,9 +353,9 @@ input#SignIn {
     background-color: #f1eec3;
 }
 @media screen and (max-width: 768px) {
-    .bodyContent {
+    /*.bodyContent {
         padding-top: 50px;
-    }
+    }*/
 
     .container .jumbotron {
         min-height: 150px;
@@ -505,6 +507,7 @@ div#adminNav {
     background-color: rgb(72, 9, 18);
     width: 7%;
     margin: 10px;
+    margin-top: 2%;
 }
 
 .navbar-header{
@@ -513,8 +516,8 @@ div#adminNav {
 
 @media screen and (max-width: 790px){
     h1.LogoName {
-    font-family: 'Cabin Sketch', cursive;
-    font-size: 75px;
+    font-family: 'Amarante', cursive;
+    font-size: 70px;
     padding-left: 15px;
         color: #f1eec3;
 }
@@ -584,9 +587,16 @@ div#adminNav {
         margin: 10px;
     }
 
+    h6.motto-name {
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    color: #f1eec3;
+        font-size: 15px;
+}
+
     h1.LogoName {
-        font-family: 'Cabin Sketch', cursive;
-        font-size: 35px;
+        font-family: 'Amarante', cursive;
+            font-size: 55px;
         padding-left: 15px;
         color: #f1eec3;
         text-align: center;
@@ -646,9 +656,29 @@ h6.motto-name {
     text-align: center;
     font-family: 'Cabin Sketch', cursive;
     color: #f1eec3;
-        font-size: 35px;
+        font-size: 28px;
 }
 
 nav-bar-motto {
     
+}
+
+@media screen and (max-width: 489px) {
+    .nav-bar-motto{
+        display: none;
+    }
+}
+
+
+
+
+
+Footer-with-soc…l-icons.css:52
+#myFooter .social-networks a {
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
 }
