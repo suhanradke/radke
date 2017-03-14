@@ -7,9 +7,11 @@ using System.Web.Mvc;
 namespace OppositeEnds.Controllers
 {
     public class FloralsController : Controller
+
     {
         private OppositeEndsContext db = new OppositeEndsContext();
-
+       
+        [Authorize]
         // GET: Florals
         public ActionResult Index()
         {
@@ -118,6 +120,17 @@ namespace OppositeEnds.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        // GET: FloralFront
+
+        public ActionResult FloralFront()
+        {
+           var floral = db.Florals.ToList();
+
+            return View(floral);
+
+        
         }
     }
 }
