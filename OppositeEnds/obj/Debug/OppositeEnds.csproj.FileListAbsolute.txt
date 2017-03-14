@@ -413,3 +413,6 @@ C:\Users\Avishkar\Desktop\team3\OppositeEnds\obj\Debug\OppositeEnds.pdb
 C:\Users\Avishkar\Desktop\team3\OppositeEnds\obj\Debug\OppositeEnds.Migrations.validations.resources
 C:\Users\Avishkar\Desktop\team3\OppositeEnds\obj\Debug\OppositeEnds.Migrations.validations1.resources
 C:\Users\Avishkar\Desktop\team3\OppositeEnds\obj\Debug\OppositeEnds.Migrations.dbupdate.resources
+C:\Users\Shiva\Desktop\naya\OppositeEnds\obj\Debug\OppositeEnds.Migrations.validations.resources
+C:\Users\Shiva\Desktop\naya\OppositeEnds\obj\Debug\OppositeEnds.Migrations.validations1.resources
+C:\Users\Shiva\Desktop\naya\OppositeEnds\obj\Debug\OppositeEnds.Migrations.dbupdate.resources
