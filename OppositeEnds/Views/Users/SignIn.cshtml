@@ -18,7 +18,7 @@
                 <div class="row hi">
                     <div class="col-sm-12 col-md-6">
                         <div class="signindesign">
-                           
+                            <span><font color="red">@Html.ValidationMessage("Error")</font></span>
                             @using (Html.BeginForm())
                             {
                                 @Html.AntiForgeryToken()

@@ -72,29 +72,44 @@ namespace OppositeEnds.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult SignIn([Bind(Include = "UserName,Password")] User userTryingToLogin)
         {
-            if (userTryingToLogin != null)
+
+
             {
 
-                User doesUserExist = db.Users.FirstOrDefault(s => s.UserName.Equals(userTryingToLogin.UserName));
+                if (userTryingToLogin != null)
+                {
 
-                //bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
-                //if (a == true)
-                //{
-                //}
-                if (userTryingToLogin.Password == doesUserExist.Password)
-                {
-                    System.Web.Security.FormsAuthentication.SetAuthCookie(doesUserExist.Email, false);
-                    //return View("AdminDashBoard");
-                    return RedirectToAction("AdminDashBoard", "Users");
+                    User doesUserExist = db.Users.FirstOrDefault(s => s.UserName.Equals(userTryingToLogin.UserName));
+                    try
+                    {
+                        //bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
+                        //if (a == true)
+                        //{
+                        //}
+                        if (userTryingToLogin.Password == doesUserExist.Password)
+                        {
+                            System.Web.Security.FormsAuthentication.SetAuthCookie(doesUserExist.Email, false);
+                            //return View("AdminDashBoard");
+                            return RedirectToAction("AdminDashBoard", "Users");
+                        }
+
+                        else
+                        {
+                            ModelState.AddModelError("Error", "Invalid Username/Password combination. Please try again");
+                            return View(userTryingToLogin);
+                        }
+                    }
+                    catch
+                    {
+                        ModelState.AddModelError("Error", "Invalid Username/Password combination. Please try again");
+                        return View(userTryingToLogin);
+                    }
+
+
                 }
-                else
-                {
-                    return RedirectToAction("SignIn","Users");
-                }
+           
             }
             return View();
-
-
         }
 
 
