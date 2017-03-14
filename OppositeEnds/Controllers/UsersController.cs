@@ -68,6 +68,61 @@ namespace OppositeEnds.Controllers
         }
 
 
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult SignIn([Bind(Include = "Email,Password")] AccountLoginViewModel userTryingToLogin)
+        //{
+        //    if (userTryingToLogin != null & ModelState.IsValid)
+        //    {
+
+        //        FundRaisers doesUserExist = db.FundRaisers.FirstOrDefault(s => s.Email.Equals(userTryingToLogin.Email));
+        //        try
+        //        {
+        //            if (!doesUserExist.verified)
+        //            {
+        //                ModelState.AddModelError("doesUserExist", "Email Not verified. Please check your email confirmation");
+        //                return View("SignInFailure");
+        //            }
+
+        //            bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
+        //            if (a == true)
+        //            {
+
+        //                // creating authetication ticket
+        //                FormsAuthentication.SetAuthCookie(userTryingToLogin.Email, false);
+        //                Session["userId"] = doesUserExist.FundRaisersId;
+        //                return RedirectToAction("Index", "Home");
+        //            }
+        //            else
+        //            {
+        //                @ViewBag.Message = "Error.Ivalid login.";
+        //                return View("SignInFailure");
+        //            }
+
+        //        }
+        //        catch
+        //        {
+        //            @ViewBag.Message = "Error.Ivalid login.";
+        //            return View("SignInFailure");
+
+        //        }
+        //    }
+        //    ModelState.AddModelError("UserDoesNotExist", "Username or Password is Incorrect! Please try Again!!");
+        //    return View(userTryingToLogin);
+
+        //}
+
+
+
+        //public ActionResult SignInFailure()
+        //{
+        //    return View();
+        //}
+
+
+
+
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult SignIn([Bind(Include = "UserName,Password")] User userTryingToLogin)

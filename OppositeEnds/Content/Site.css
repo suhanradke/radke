@@ -93,7 +93,7 @@ h1.LogoName {
 }
 
 h1.LogoName {
-    font-family: 'Cabin Sketch', cursive;
+    font-family: 'Marck Script', cursive;
     font-size: 90px;
     padding-left: 15px;
         color: #f1eec3;
@@ -483,6 +483,12 @@ div#adminNav {
     margin: 10px;
 
 }
+.nav-bar-motto{
+    background-color: #480912;
+    width: 43%;
+    /*height: 100px;*/
+    margin: 10px;
+}
 
 .navbar-container{
     display: -webkit-flex;
@@ -622,4 +628,27 @@ body {
   margin: 0 auto -60px;
   /* Pad bottom by footer height */
   padding: 0 0 60px;
+}
+
+
+.motto-container{
+    width:100%;
+    display:flex;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 75px;
+    justify-content:center;
+        margin-top: -18px;
+        height: 67px;
+}
+
+
+h6.motto-name {
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    color: #f1eec3;
+        font-size: 35px;
+}
+
+nav-bar-motto {
+    
 }
