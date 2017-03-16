@@ -74,10 +74,13 @@ h1.LogoName {
     }
 }
 .nav > li > a {
+    text-align:center;
     position: relative;
     display: block;
     padding: 10px 15px;
+      font-family: Oregano, cursive;
     font-size: 20px
+     
 }
 
 
@@ -116,7 +119,7 @@ h1.LogoName {
     text-align: center;
 }
 
-<<<<<<< HEAD
+/*<<<<<<< HEAD*/
 .mad-carousel{
     height:400px;
     width:600px;
@@ -248,7 +251,7 @@ input#SignIn {
     margin: 0px;
     padding:0px;
 }
-=======
+/*=======*/
 #myFooter .footer-copyright p{
     margin:10px;
     color: #ccc;
@@ -595,8 +598,10 @@ div#adminNav {
 }
 
     h1.LogoName {
+
+
         font-family: 'Amarante', cursive;
-            font-size: 55px;
+            font-size: 45px;
         padding-left: 15px;
         color: #f1eec3;
         text-align: center;
@@ -659,9 +664,7 @@ h6.motto-name {
         font-size: 28px;
 }
 
-nav-bar-motto {
-    
-}
+
 
 @media screen and (max-width: 489px) {
     .nav-bar-motto{
@@ -673,7 +676,7 @@ nav-bar-motto {
 
 
 
-Footer-with-soc…l-icons.css:52
+
 #myFooter .social-networks a {
     font-size: 32px;
     margin-right: 5px;
@@ -682,3 +685,159 @@ Footer-with-soc…l-icons.css:52
     padding: 10px;
     transition: 0.2s;
 }
+
+/*.VintageBackground {
+ background-image: url('Images/cafe/day-3522-night-cafe.jpg');
+ width: 100%;
+ height:600px;
+}*/
+
+#VintageBody {
+    background-image: url('Images/cafe/day-3522-night-cafe.jpg');
+   
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+
+.restaurant-info.border {
+    border-style: double;
+    width: 75%;
+    margin: 0 auto;
+     border-style: double;
+    width: 75%;
+    margin: 0 auto;
+    border-color: transparent;
+    border-color: none;
+}
+
+.col-md-8.info {
+    margin-left: 3%;
+    background-color: #341313;
+}
+
+.VintageBodyContent h2 {
+    color: white;
+        font-family: Oregano, cursive;
+        font-size:50px;
+}
+.VintageBodyContent p {
+    color: white;
+        font-family: Oregano, cursive;
+        font-size:30px;
+}
+.info-body.address {
+    color: white;
+        font-family: Oregano, cursive;
+        text-align: center;
+                font-size: 20px;
+}
+.info-body a {
+    color: white;
+        font-family: Oregano, cursive;
+        font-size:20px;
+}
+
+h1.LogoVintage {
+    display: inline-block;
+    font-family: 'Amarante', cursive;
+    font-size: 90px;
+    padding-left: 15px;
+    color: #f1eec3;
+}
+
+
+@media screen and (max-width: 500px) {
+   h1.LogoVintage {
+    display: inline-block;
+    font-family: 'Amarante', cursive;
+    font-size: 55px;
+    padding-left: 15px;
+    color: #f1eec3;
+}
+
+
+   .VintageBodyContent h2 {
+    color: white;
+    font-family: Oregano, cursive;
+    font-size: 45px;
+}
+   .VintageBodyContent p {
+    color: white;
+    font-family: Oregano, cursive;
+    font-size: 20px;
+}
+}
+.info-body.hours {
+    text-align: center;
+}
+
+.info-body.phone {
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+    #VintageBody {
+        background-image: url(Images/cafe/day-3522-night-cafe.jpg);
+        background-size: 100% 100%;
+        width: 100%;
+        height: 1000px;
+    }
+}
+.info-header {
+    text-align: center;
+    color: #f1eec3;
+    font-size: 20px;
+    font-family: 'Amarante', cursive;
+}
+
+.col-md-3.Time{
+        background-color: rgba(52, 19, 19, 0.69);
+}
+    
+
+@media screen and (max-width: 412px){
+    h1.LogoVintage {
+    display: inline-block;
+    font-family: 'Amarante', cursive;
+    font-size: 35px;
+    padding-left: 15px;
+    color: #f1eec3;
+}
+}
+
+
+@media screen and (max-width: 412px) {
+    .navbar-container {
+        display: -webkit-flex;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        background-color: rgb(72, 9, 18);
+        justify-content: center;
+    }
+    h1.LogoVintage {
+    display: inline-block;
+    font-family: 'Amarante', cursive;
+    font-size: 35px;
+    padding-left: 15px;
+    color: #f1eec3;
+    margin-top: 40px;
+}
+}
+
+
+/*@media screen and (max-width: 500px) {
+    .motto-container {
+        width: 100%;
+        display: flex;
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 75px;
+        justify-content: center;
+        margin-top: -18px;
+        height:2px;
+    }
+}*/
