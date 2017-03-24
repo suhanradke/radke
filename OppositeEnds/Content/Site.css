@@ -24,9 +24,10 @@ ul.nav.navbar-nav.navbar-right {
 .FloralTitle{
     text-align:center;
     padding-bottom:50px;
-    font-size: 45px;
+    font-size: 65px;
     font-family: Oregano, cursive;
-
+        /*color: #e9e4bb;*/
+        color: white;
 }
 
 
@@ -79,7 +80,7 @@ h1.LogoName {
     display: block;
     padding: 10px 15px;
       font-family: Oregano, cursive;
-    font-size: 20px
+    font-size: 28px
      
 }
 
@@ -181,15 +182,19 @@ h1.LogoName {
     font-size:100px;
 
 }
-.hi{
-    margin:0px;
-    border:1px;
+
+
+    .hi {
+    margin: 0px;
+    border: 1px double;
+    border-color: #480912;
 }
+
 .marg{
     margin:3% 20% auto;
     position:initial;
     border-radius:3px;
-    border:1px solid #d8cda9;
+   border: 1px solid #480912;
 }
 .hie{
     top:50px;
@@ -215,13 +220,14 @@ h1.LogoName {
     border-bottom-color:darkgray;
 }
 .oppositeends {
-    font-family: Oregano, cursive;
-    font-size: 40px;
-    padding-left: 2%; 
-    margin-bottom:0px;
-    color:maroon;
-    background-color:#efe3cb;
-    border-bottom:outset;
+        font-size: 40px;
+    padding-left: 2%;
+    margin-bottom: 0px;
+    text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    color: #d9cfab;
+    background-color: #480912;
+    border-bottom: outset;
    
 }
 
@@ -331,9 +337,10 @@ input#SignIn {
 }
 
 #Greet{
-    font-family: 'Homemade Apple', cursive;
+    /*font-family: 'Homemade Apple', cursive;*/
     text-align:center;
     font-size:55px;
+    font-family: 'Amarante', cursive;
 }
 #Welcome{
     font-family: Oregano, cursive;
@@ -783,7 +790,8 @@ h1.LogoVintage {
         background-image: url(Images/cafe/day-3522-night-cafe.jpg);
         background-size: 100% 100%;
         width: 100%;
-        height: 1000px;
+        /*height: 1000px;*/
+        height: 1156px;
     }
 }
 .info-header {
@@ -841,3 +849,94 @@ h1.LogoVintage {
         height:2px;
     }
 }*/
+
+
+.container.Florals {
+    /*background-image: url('Images/backgroundImage/wood-002650-deep-maroon.jpg');*/
+    background-color: #480912;
+}
+
+
+.container.Furnitures {
+    /*background-image: url('Images/backgroundImage/wood-002650-deep-maroon.jpg');*/
+    background-color: #480912;
+}
+
+
+.thumbnail .caption {
+    padding: 9px;
+    color: #333333;
+    /*background-color: #f1eec3;*/
+    background-color: #480912;
+}
+
+.Map{
+    /*margin-top: 8%;*/
+}
+
+
+
+#map_canvas {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+}
+
+.model > ul, li, a {
+    color: maroon;
+    font-size: 18px;
+}
+.model > ul, li {
+    padding: 10px;
+}
+
+.MapBody{
+    margin-top:8%;
+
+}
+
+.container.Hours {
+    margin-top: 7%;
+}
+
+.Hours h1 {
+    /* font-family: Oregano, cursive; */
+    font-family: 'Amarante', cursive;
+        font-size: 50px;
+}
+
+
+.Hours > ul, li, a {
+    font-family: cursive;
+}
+.container.Hours {
+        background-color: #eaeaea;
+}
+
+.container.MapColor {
+    background-color: #eaeaea;
+}
+
+a#ABC {
+    font-size: 23px;
+}
+
+.caption, h3 {
+    color: white;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    height: 1156px;
+}
+
+.caption p {
+    color: white;
+}
+#TitleFlo{
+    font-size: 31px;
+    font-family: 'Amarante', cursive;
+    color: #f1eec3;
+}
