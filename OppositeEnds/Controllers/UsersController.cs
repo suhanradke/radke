@@ -137,7 +137,7 @@ namespace OppositeEnds.Controllers
                     User doesUserExist = db.Users.FirstOrDefault(s => s.UserName.Equals(userTryingToLogin.UserName));
                     try
                     {
-                        //bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.Password);
+                        //bool a = Crypto.VerifyHashedPassword(doesUserExist.Password, userTryingToLogin.P assword);
                         //if (a == true)
                         //{
                         //}

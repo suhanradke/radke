@@ -1,7 +1,9 @@
 ﻿using OppositeEnds.Models;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 
 namespace OppositeEnds.Controllers
@@ -44,14 +46,18 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral)
         {
             if (ModelState.IsValid)
             {
-                db.Florals.Add(floral);
+    
+           
+               db.Florals.Add(floral);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
+           
 
             return View(floral);
         }
@@ -76,7 +82,7 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral)
+        public ActionResult Edit([Bind(Include = "Id,Name,Price,Quantity,Details,Category,Picture")] Floral floral)
         {
             if (ModelState.IsValid)
             {
@@ -144,5 +150,6 @@ namespace OppositeEnds.Controllers
             }
             return View(florals);
         }
+
     }
 }
