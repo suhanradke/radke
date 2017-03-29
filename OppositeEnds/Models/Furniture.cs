@@ -22,9 +22,14 @@ namespace OppositeEnds.Models
 
         public string Picture { get; set; }
 
+<<<<<<< HEAD
         public static implicit operator Furniture(List<Furniture> v)
         {
             throw new NotImplementedException();
         }
+=======
+        public string Details { get; set; }
+
+>>>>>>> b87dd92c48a5880e869d0e519a63421f37211778
     }
 }

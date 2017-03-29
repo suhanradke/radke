@@ -46,7 +46,11 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+<<<<<<< HEAD
         public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral, HttpPostedFileBase file)
+=======
+        public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Details,Category,Picture")] Floral floral)
+>>>>>>> b87dd92c48a5880e869d0e519a63421f37211778
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +97,7 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral)
+        public ActionResult Edit([Bind(Include = "Id,Name,Price,Quantity,Details,Category,Picture")] Floral floral)
         {
             if (ModelState.IsValid)
             {
