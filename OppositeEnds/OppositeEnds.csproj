@@ -201,6 +201,14 @@
     <Compile Include="Migrations\201703132051020_dbupdate.Designer.cs">
       <DependentUpon>201703132051020_dbupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703290504437_floralDetailAdded.cs" />
+    <Compile Include="Migrations\201703290504437_floralDetailAdded.Designer.cs">
+      <DependentUpon>201703290504437_floralDetailAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703290522207_furnitureDetailAdded.cs" />
+    <Compile Include="Migrations\201703290522207_furnitureDetailAdded.Designer.cs">
+      <DependentUpon>201703290522207_furnitureDetailAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Floral.cs" />
@@ -367,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703132051020_dbupdate.resx">
       <DependentUpon>201703132051020_dbupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703290504437_floralDetailAdded.resx">
+      <DependentUpon>201703290504437_floralDetailAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703290522207_furnitureDetailAdded.resx">
+      <DependentUpon>201703290522207_furnitureDetailAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

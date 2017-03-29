@@ -21,5 +21,11 @@ namespace OppositeEnds.Models
 
         public string Picture { get; set; }
 
+        public string Details { get; set; }
+
+        //public byte[] ImageData { get; set; }
+
+        //public string ImageMimeType { get; set; }
+
     }
 }

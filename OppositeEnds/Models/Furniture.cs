@@ -20,5 +20,7 @@ namespace OppositeEnds.Models
 
         public string Picture { get; set; }
 
+        public string Details { get; set; }
+
     }
 }
