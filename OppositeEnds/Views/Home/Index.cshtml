@@ -121,54 +121,8 @@
             <!-- /.row -->
             <!-- Page Features -->
             <div class="row text-center">
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="~/Content/Images/florals/florals1.JPG " class="img-responsive"  alt=""/>
-                        <div class="caption">
-                            <h3>Item1</h3>
-                            <p>
-                                @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="~/Content/Images/florals/florals2.jpg" class="img-responsive" alt="">
-                        <div class="caption">
-                            <h3>Item2</h3>
-                          
-                            <p>
-                                @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="~/Content/Images/florals/florals3.jpg" class="img-responsive" alt="">
-                        <div class="caption">
-                            <h3>Item3</h3>
-                            
-                            <p>
-                                @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 hero-feature">
-                    <div class="thumbnail">
-                        <img src="~/Content/Images/florals/florals4.png" alt="">
-                        <div class="caption">
-                            <h3>Item4</h3>
-                            <p>
-                                @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                </div>
+               
+                
 
             <br>
             <br>
@@ -182,56 +136,43 @@
     <!-- /.row -->
     <!-- Page Features -->
     <div class="row text-center">
+@foreach (var florals in Model.florals.Take(3))
+{
         <div class="col-md-3 col-sm-6 hero-feature">
             <div class="thumbnail">
-                <img src="~/Content/Images/Furnitures/f1.jpg" class="img-responsive" alt="" />
+                <a href="@Url.Action("productdetails","florals",new {id= florals.Id})">
+                    <img class="img-responsive" src="~/Content/images/florals/@(florals.Picture).jpg">
+                </a>
                 <div class="caption">
-                    <h3>Item1</h3>
+                    <h3>@florals.Name</h3>
                     <p>
                         @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
                     </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="~/Content/Images/Furnitures/f2.jpg" class="img-responsive" alt="">
-                <div class="caption">
-                    <h3>Item2</h3>
-
-                    <p>
-                        @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                    </p>
+}
+        <div class="row text-center">
+            @foreach (var furnitures in Model.furnitures.Take(3))
+            {
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.Id})">
+                            <img class="img-responsive" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
+                        </a>
+                        <div class="caption">
+                            <h3>@furnitures.Name</h3>
+                            <p>
+                                @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="~/Content/Images/Furnitures/f3.jpg" class="img-responsive" alt="">
-                <div class="caption">
-                    <h3>Item3</h3>
+            }
 
-                    <p>
-                        @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6 hero-feature">
-            <div class="thumbnail">
-                <img src="~/Content/Images/Furnitures/f4.jpg" alt="">
-                <div class="caption">
-                    <h3>Item4</h3>
-                    <p>
-                        @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
-
-    </div>
+        </div>
 </div>
     </div>
 
@@ -260,24 +201,7 @@
         </div>
    
    
-    @foreach (var florals in Model.florals.Take(3))
-            {
-       
-        <a href="@Url.Action("productdetails","florals",new {id= florals.Id})">
-            <img class="img-responsive" src="~/Content/images/florals/@(florals.Picture).jpg">
-        </a>
-        @florals.Name
 
-    }
-
-@foreach (var furnitures in Model.furnitures.Take(3))
-            {
-    @furnitures.Name
-}
-
-
-    
-   
        
           
 </body>
