@@ -151,24 +151,5 @@ namespace OppositeEnds.Controllers
             return View(florals);
         }
 
-        //[HttpPost]
-        //public ActionResult FileUpload(HttpPostedFileBase file)
-        //{
-        //    var path = "";
-        //    if (file!= null)
-        //    {//for checking uploaded file is a image or not
-        //        if(file.ContentLength>0)
-        //        {
-        //            if(Path.GetExtension(file.FileName).ToLower()==".jpg")
-        //                {
-        //                path = Path.Combine(Server.MapPath("~/Content/Images/florals"), file.FileName);
-        //                file.SaveAs(path);
-        //                ViewBag.UploadSuccess = true;
-        //            }
-        //        }
-        //    }
-        //    // after successfully uploading redirect the user
-        //    return View();
-        //}
     }
 }
