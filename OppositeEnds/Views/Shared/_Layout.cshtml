@@ -127,20 +127,23 @@
                 </div>
     </nav>
 
-    <div class="bodyContent">
+        <div class="container-fluid">
+    <div class="bodyContent1">
         <div class="row">
     @if (Request.IsAuthenticated)
             {
-            <div class="row ok">
-            <div class="col-sm-2" id="adminNav">
+           <div class="row ok">
+            <div class="col-sm-3" id="adminNav">
                 @Html.Partial("_AdminNavBody")
-                @*<h1>Head</h1>*@
             </div>
 
-            <div class="col-sm-8">
+            <div class="col-sm-9">
+                <div class="container Data">
                 @RenderBody()
+                    </div>
             </div>
-                </div>
+               </div>
+                
 
             }
             else
@@ -150,12 +153,10 @@
             </div>
             }
         </div>
-    </div>
-
-
-    <div class="content">
-    </div>
+</div>
         </div>
+        </div>
+      
 
     <footer id="myFooter">
         <div class="container">

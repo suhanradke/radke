@@ -417,6 +417,8 @@ input#SignIn {
 
 .row.ok {
     margin-top: -1.92%;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 h5#headAdmin {
@@ -470,6 +472,7 @@ label {
 }
 div#adminNav {
     background-color: #e3dbb4;
+    height: 73vh;
 }
 
 .carousel-inner1 > .item > img {
@@ -644,7 +647,8 @@ body {
 
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 100%;
+  /*min-height: 100%;*/
+  min-height: 80%;
   height: auto;
   /* Negative indent footer by its height */
   margin: 0 auto -60px;
@@ -692,21 +696,6 @@ h6.motto-name {
     padding: 10px;
     transition: 0.2s;
 }
-
-/*.VintageBackground {
- background-image: url('Images/cafe/day-3522-night-cafe.jpg');
- width: 100%;
- height:600px;
-}*/
-
-#VintageBody {
-    background-image: url('Images/cafe/day-3522-night-cafe.jpg');
-   
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-}
-
 
 .restaurant-info.border {
     border-style: double;
@@ -784,16 +773,8 @@ h1.LogoVintage {
     text-align: center;
 }
 
-@media screen and (max-width: 500px) {
 
-    #VintageBody {
-        background-image: url(Images/cafe/day-3522-night-cafe.jpg);
-        background-size: 100% 100%;
-        width: 100%;
-        /*height: 1000px;*/
-        height: 1156px;
-    }
-}
+
 .info-header {
     text-align: center;
     color: #f1eec3;
@@ -928,9 +909,9 @@ a#ABC {
 
 
 
-@media screen and (max-width: 500px) {
+/*@media screen and (max-width: 500px) {
     height: 1156px;
-}
+}*/
 
 .caption p {
     color: white;
@@ -939,4 +920,57 @@ a#ABC {
     font-size: 31px;
     font-family: 'Amarante', cursive;
     color: #f1eec3;
+}
+
+
+.VinHeadcontent {
+    background-image: url('Images/cafe/day-3522-night-cafe.jpg');
+}
+
+#VintageBody{
+    background-color:rgb(37, 4, 4);
+}
+
+.info1{
+        background-color: rgba(70, 6, 6, 0.66);
+}
+
+.VintageBodyContent {
+   background-image: url('Images/cafe/vintage5.jpg');
+}
+
+.VinBody {
+    background-image: url('Images/cafe/vintage5.jpg');
+    position:fixed;
+    
+}
+
+.adminList{
+    list-style:none;
+}
+
+.bodyContent {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.bodyContent1 {
+    margin-top: 2%;
+}
+
+
+@media screen and (max-width: 761px) {
+    div#adminNav {
+        background-color: #e3dbb4;
+        height: 35vh;
+    }
+}
+
+
+.container.Data {
+    margin-top: 5%;
+}
+
+ul.adminList, li a {
+    text-align: center;
 }
