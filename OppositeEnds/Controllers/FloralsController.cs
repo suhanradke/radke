@@ -55,7 +55,7 @@ namespace OppositeEnds.Controllers
            
                db.Florals.Add(floral);
                 db.SaveChanges();
-                //return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
            
 
