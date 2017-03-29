@@ -1,4 +1,6 @@
-﻿@{
+﻿@model OppositeEnds.ViewModels.storefrontitemsView
+    
+@{
     ViewBag.Title = "OppositeEnds";
 }
 
@@ -256,5 +258,27 @@
         </div>
         </div>
         </div>
+   
+   
+    @foreach (var florals in Model.florals.Take(3))
+            {
+       
+        <a href="@Url.Action("productdetails","florals",new {id= florals.Id})">
+            <img class="img-responsive" src="~/Content/images/florals/@(florals.Picture).jpg">
+        </a>
+        @florals.Name
+
+    }
+
+@foreach (var furnitures in Model.furnitures.Take(3))
+            {
+    @furnitures.Name
+}
+
+
+    
+   
+       
+          
 </body>
 

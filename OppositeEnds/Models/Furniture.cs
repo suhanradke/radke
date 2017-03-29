@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace OppositeEnds.Models
 {
@@ -20,5 +22,9 @@ namespace OppositeEnds.Models
 
         public string Picture { get; set; }
 
+        public static implicit operator Furniture(List<Furniture> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

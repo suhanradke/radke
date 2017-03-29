@@ -1,7 +1,9 @@
 ﻿using OppositeEnds.Models;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 
 namespace OppositeEnds.Controllers
@@ -44,14 +46,29 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral)
+        public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral, HttpPostedFileBase file)
         {
             if (ModelState.IsValid)
             {
+                var path = "";
+            if (file != null)
+            {//for checking uploaded file is a image or not
+                if (file.ContentLength>0)
+                {
+                    if(Path.GetExtension(file.FileName).ToLower() == ".jpg")
+                    {
+                        path = Path.Combine(Server.MapPath("~/Content/Images/florals"), file.FileName);
+                        file.SaveAs(path);
+                        ViewBag.UploadSuccess = true;
+                    }
+                }
+            }
+            
                 db.Florals.Add(floral);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
+           
 
             return View(floral);
         }
@@ -144,5 +161,25 @@ namespace OppositeEnds.Controllers
             }
             return View(florals);
         }
+
+        //[HttpPost]
+        //public ActionResult FileUpload(HttpPostedFileBase file)
+        //{
+        //    var path = "";
+        //    if (file!= null)
+        //    {//for checking uploaded file is a image or not
+        //        if(file.ContentLength>0)
+        //        {
+        //            if(Path.GetExtension(file.FileName).ToLower()==".jpg")
+        //                {
+        //                path = Path.Combine(Server.MapPath("~/Content/Images/florals"), file.FileName);
+        //                file.SaveAs(path);
+        //                ViewBag.UploadSuccess = true;
+        //            }
+        //        }
+        //    }
+        //    // after successfully uploading redirect the user
+        //    return View();
+        //}
     }
 }
