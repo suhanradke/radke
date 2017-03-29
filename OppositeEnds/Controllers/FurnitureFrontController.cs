@@ -11,12 +11,13 @@ namespace OppositeEnds.Controllers
     public class FurnitureFrontController : Controller
     {
 
+        private OppositeEndsContext db = new OppositeEndsContext();
 
-        private OppositeEndsContext _context;
-        public FurnitureFrontController()
-        {
-            _context = new OppositeEndsContext();
-        }
+        //private OppositeEndsContext _context;
+        //public FurnitureFrontController()
+        //{
+        //    _context = new OppositeEndsContext();
+        //}
 
         protected override void Dispose(bool disposing)
         {
@@ -29,9 +30,20 @@ namespace OppositeEnds.Controllers
         public ActionResult Index()
         {
 
-            var furnitures = _context.furnitures;
+            var furnitures = db.furnitures.ToList();
          
             return View(furnitures);
         }
+
+        public ActionResult productdetails(int? id)
+        {
+            var furniture = db.furnitures.SingleOrDefault(c => c.Id == id);
+            if(furniture==null)
+            {
+                return HttpNotFound();
+            }
+            return View(furniture);
+        }
+
     }
 }

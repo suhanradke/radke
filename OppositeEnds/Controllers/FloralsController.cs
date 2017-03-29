@@ -132,5 +132,17 @@ namespace OppositeEnds.Controllers
 
         
         }
+
+        // GET: FloralFront
+        
+        public ActionResult productdetails(int? id)
+        {
+            var florals = db.Florals.SingleOrDefault(c => c.Id == id);
+            if (florals == null)
+            {
+                return HttpNotFound();
+            }
+            return View(florals);
+        }
     }
 }

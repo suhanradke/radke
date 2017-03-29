@@ -4,16 +4,18 @@
     ViewBag.Title = "Furnitures";
 }
 
-<div class="container Florals">
+<div class="container Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Furniture Section</h1>
-<div class="container Florals">
+<div class="container Florals2">
 <div class="col-xs-12 col-sm-12 ">
     <div class="row">
         @foreach (var furnitures in Model)
             {
-            <div class="col-xs-12 col-md-4" >
+            <div class="col-xs-12 col-md-3" >
                 <div class="thumbnail">
-                    <img class="img-responsive" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
+                    <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.Id})">
+                        <img class="img-responsive See" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg" width="200">
+                    </a>
                     <div class="caption text-center">
                         <p>
                             <b>Name:</b> <span> @furnitures.Name</span>

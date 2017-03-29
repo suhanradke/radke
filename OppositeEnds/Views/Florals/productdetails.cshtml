@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "productdetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="ProductBody">
+    <div class="ProductContent">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well second">
+                
+<img class="img-responsive productItem"  src="~/Content/images/florals/@(Model.Picture).jpg"  width="250">
+                </div>
+            
+        </div>
+        
+        <div class="col-md-8">
+            <div class="well first">
+            <h1>Name : @Model.Name</h1>
+            <h1>Category : </h1>
+            <h1>Price : $ @Model.Price </h1>
+                <div class="row Goup">
+            <div class="col-sm-4"><h1>Details : </h1></div> <div class=" col-sm-6 Cat"><h1>Here will be some information about the current item </h1></div>  
+                    </div>
+            </div>
+            </div>
+</div>
+</div>
+</div>

@@ -332,6 +332,8 @@
     <Content Include="Views\Shared\_AdminNavBody.cshtml" />
     <Content Include="Views\Shared\_VintageLayout.cshtml" />
     <Content Include="Views\Home\VintageIndex.cshtml" />
+    <Content Include="Views\Florals\productdetails.cshtml" />
+    <Content Include="Views\FurnitureFront\productdetails.cshtml" />
     <None Include="Views\Vintage\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
