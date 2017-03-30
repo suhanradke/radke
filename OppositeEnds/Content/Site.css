@@ -23,11 +23,13 @@ ul.nav.navbar-nav.navbar-right {
 
 .FloralTitle{
     text-align:center;
-    padding-bottom:50px;
+    /*padding-bottom:50px;*/
     font-size: 65px;
     font-family: Oregano, cursive;
         /*color: #e9e4bb;*/
-        color: white;
+       color: #480912;
+               background-color: white;
+
 }
 
 
@@ -836,13 +838,18 @@ h1.LogoVintage {
 }*/
 
 
-.container.Florals {
-    /*background-image: url('Images/backgroundImage/wood-002650-deep-maroon.jpg');*/
-        /*background-color: #3b4e2d;*/
-                background-color: #3b4e2d;
-                margin-bottom: 10%;
-}
+/*.container.Florals {
+    margin-top: 2%;
+    background-color: rgba(72, 66, 9, 0.17);
+}*/
 
+.container.Florals {
+    margin-top: 2%;
+        background-color: rgb(255, 255, 255);
+    border: solid;
+    border-radius: 20px;
+       border-color: #ffffff;
+}
 
 .container.Furnitures {
     /*background-image: url('Images/backgroundImage/wood-002650-deep-maroon.jpg');*/
@@ -854,13 +861,18 @@ h1.LogoVintage {
     padding: 9px;
     color: #333333;
     /*background-color: #f1eec3;*/
-       background-color: #3b4e2d;
+           background-color: white;
+       margin-top:1%;
 }
 
 .Map{
     /*margin-top: 8%;*/
 }
 
+.Map {
+    border: solid;
+    border-color: white;
+}
 
 
 #map_canvas {
@@ -883,7 +895,12 @@ h1.LogoVintage {
 
 }
 
+
 .container.Hours {
+    background-color:white;
+    border: solid;
+    border: transparent;
+    border-radius: 20px;
     margin-top: 7%;
 }
 
@@ -897,22 +914,40 @@ h1.LogoVintage {
 .Hours > ul, li, a {
     font-family: cursive;
 }
-.container.Hours {
+/*.container.Hours {
         background-color: #eaeaea;
-}
+}*/
 
 .container.MapColor {
     background-color: #eaeaea;
+    margin-top: 5%;
+    border: solid;
+    /*border: transparent;*/
+    border-radius: 10px;
+        border-color: white;
 }
 
 a#ABC {
     font-size: 23px;
 }
 
-.caption, h3 {
+/*.caption, h3 {
     color: white;
+}*/
+.caption, h3 {
+       color: black;
+    /* font-family: cursive; */
+    /* text-decoration: none; */
+    font-family: 'Amarante', cursive;
 }
 
+
+
+
+
+.caption.one {
+    background-color: white;
+}
 
 
 /*@media screen and (max-width: 500px) {
@@ -920,7 +955,11 @@ a#ABC {
 }*/
 
 .caption p {
-    color: white;
+    color: black;
+}
+
+.thumbnail, b {
+    color: black;
 }
 #TitleFlo{
     font-size: 31px;
@@ -929,9 +968,9 @@ a#ABC {
 }
 
 
-.VinHeadcontent {
+/*.VinHeadcontent {
     background-image: url('Images/cafe/day-3522-night-cafe.jpg');
-}
+}*/
 
 #VintageBody{
     background-color:rgb(37, 4, 4);
@@ -992,7 +1031,7 @@ ul.adminList, li a {
 img.img-responsive.productItem {
     display: block;
     margin: 0 auto;
-    height:52vh;
+    height:54vh;
 }
 
 
@@ -1015,9 +1054,6 @@ border: #ffffff;
         box-shadow: -7px 7px 12px 1px rgba(0,0,0,0.75);
 }
 
-.container.Florals {
-    margin-top: 2%;
-}
 
 .ProductContent {
    margin-right: 13%;
@@ -1052,4 +1088,47 @@ img.img-responsive.See {
     height: 35vh;
         display: block;
     margin: 0 auto;
+}
+
+
+/*for home page image thumbnail*/
+.thumbnail.one {
+    margin-top: 0%;
+    border-radius: 0px;
+    /*margin-top: 30%;*/
+    /*margin-bottom: 30%;*/
+    background-color: white;
+        border-color: white;
+}
+
+div#wrap {
+    background-color: #f1eec3;
+}
+
+.container.Florals3 {
+       background-color: #ffffff;
+    margin-bottom: 3%;
+}
+
+.restaurant-info.border {
+    margin-top: 5%;
+    background-color: #773e2a;
+}
+
+.capital.one, h3 {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #myCarousel{
+        display:none;
+    }
+}
+
+@media (min-width: 625px){
+    img.img-responsive.productItem {
+        display: block;
+    margin: 0 auto;
+    height: 335px;
+}
 }
