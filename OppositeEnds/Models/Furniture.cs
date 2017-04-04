@@ -7,7 +7,7 @@ namespace OppositeEnds.Models
     public class Furniture
     {
         
-        public int Id { get; set; }
+        public int FurnitureId { get; set; }
 
         [Required]
         [StringLength(30)]
@@ -22,11 +22,6 @@ namespace OppositeEnds.Models
 
         public string Picture { get; set; }
 
-
-        public static implicit operator Furniture(List<Furniture> v)
-        {
-            throw new NotImplementedException();
-        }
 
         public string Details { get; set; }
 

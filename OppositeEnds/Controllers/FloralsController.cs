@@ -143,7 +143,7 @@ namespace OppositeEnds.Controllers
         
         public ActionResult productdetails(int? id)
         {
-            var florals = db.Florals.SingleOrDefault(c => c.Id == id);
+            var florals = db.Florals.SingleOrDefault(c => c.FloralId == id);
             if (florals == null)
             {
                 return HttpNotFound();

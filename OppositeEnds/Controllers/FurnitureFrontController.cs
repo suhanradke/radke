@@ -1,9 +1,5 @@
 ﻿using OppositeEnds.Models;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace OppositeEnds.Controllers
@@ -37,7 +33,7 @@ namespace OppositeEnds.Controllers
 
         public ActionResult productdetails(int? id)
         {
-            var furniture = db.furnitures.SingleOrDefault(c => c.Id == id);
+            var furniture = db.furnitures.SingleOrDefault(c => c.FurnitureId == id);
             if(furniture==null)
             {
                 return HttpNotFound();

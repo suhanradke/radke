@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace OppositeEnds.Models
 {
     public class Floral
     {
         [Key]
-        public int Id { get; set; }
+        public int FloralId { get; set; }
 
         
         [Required]
@@ -24,16 +22,8 @@ namespace OppositeEnds.Models
         public string Picture { get; set; }
 
 
-        public static implicit operator Floral(List<Floral> v)
-        {
-            throw new NotImplementedException();
-        }
-
         public string Details { get; set; }
+        
 
-        //public byte[] ImageData { get; set; }
-
-        //public string ImageMimeType { get; set; }
-
-    }
+       }
 }
