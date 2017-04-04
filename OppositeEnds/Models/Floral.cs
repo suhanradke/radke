@@ -1,10 +1,13 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace OppositeEnds.Models
 {
+    [Bind(Exclude = "FloralId")]
     public class Floral
     {
-        [Key]
+        [ScaffoldColumn(false)]
         public int FloralId { get; set; }
 
         
@@ -23,7 +26,8 @@ namespace OppositeEnds.Models
 
 
         public string Details { get; set; }
-        
 
-       }
+        public virtual List<OrderDetail> OrderDetails { get; set; }
+
+    }
 }

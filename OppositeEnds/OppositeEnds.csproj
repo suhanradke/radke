@@ -209,13 +209,28 @@
     <Compile Include="Migrations\201703290522207_furnitureDetailAdded.Designer.cs">
       <DependentUpon>201703290522207_furnitureDetailAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704040342332_UpdatedFloralIdFurnitureId.cs" />
+    <Compile Include="Migrations\201704040342332_UpdatedFloralIdFurnitureId.Designer.cs">
+      <DependentUpon>201704040342332_UpdatedFloralIdFurnitureId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704040422346_CartModelAdded.cs" />
+    <Compile Include="Migrations\201704040422346_CartModelAdded.Designer.cs">
+      <DependentUpon>201704040422346_CartModelAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201704040705387_CartsAndOrderAndOrderDetailModelAdded.cs" />
+    <Compile Include="Migrations\201704040705387_CartsAndOrderAndOrderDetailModelAdded.Designer.cs">
+      <DependentUpon>201704040705387_CartsAndOrderAndOrderDetailModelAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Floral.cs" />
     <Compile Include="Models\Furniture.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\OppositeEndsContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\VIntage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -382,6 +397,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703290522207_furnitureDetailAdded.resx">
       <DependentUpon>201703290522207_furnitureDetailAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704040342332_UpdatedFloralIdFurnitureId.resx">
+      <DependentUpon>201704040342332_UpdatedFloralIdFurnitureId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704040422346_CartModelAdded.resx">
+      <DependentUpon>201704040422346_CartModelAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704040705387_CartsAndOrderAndOrderDetailModelAdded.resx">
+      <DependentUpon>201704040705387_CartsAndOrderAndOrderDetailModelAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

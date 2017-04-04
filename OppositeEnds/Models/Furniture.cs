@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace OppositeEnds.Models
 {
+    [Bind(Exclude = "FloralId")]    
     public class Furniture
     {
         
@@ -25,6 +26,7 @@ namespace OppositeEnds.Models
 
         public string Details { get; set; }
 
+        public virtual List<OrderDetail> OrderDetails { get; set; }
 
     }
 }

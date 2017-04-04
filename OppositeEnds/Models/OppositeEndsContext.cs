@@ -15,10 +15,14 @@ namespace OppositeEnds.Models
         {
         }
 
-        public System.Data.Entity.DbSet<OppositeEnds.Models.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public System.Data.Entity.DbSet<OppositeEnds.Models.Floral> Florals { get; set; }
+        public DbSet<Floral> Florals { get; set; }
 
-        public System.Data.Entity.DbSet<OppositeEnds.Models.Furniture> furnitures { get; set; }
+        public DbSet<Furniture> furnitures { get; set; }
+
+        public DbSet<Cart> Carts { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
     }
 }
