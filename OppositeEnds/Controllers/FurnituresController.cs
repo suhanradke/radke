@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using OppositeEnds.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using OppositeEnds.Models;
 
 namespace OppositeEnds.Controllers
 {
@@ -78,7 +74,7 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Price,Quantity,Details,Category,Picture")] Furniture furniture)
+        public ActionResult Edit([Bind(Include = "FurnitureId,Name,Price,Quantity,Details,Category,Picture")] Furniture furniture)
         {
             if (ModelState.IsValid)
             {

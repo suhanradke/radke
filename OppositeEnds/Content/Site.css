@@ -900,12 +900,22 @@ h1.LogoVintage {
 }
 
 
-.Hours {
+/*.Hours {
     background-color:white;
     border: solid;
     border: transparent;
     border-radius: 20px;
     margin-top: 7%;
+}*/
+
+.Hours {
+        background-color: rgb(241, 238, 195);
+    border: solid;
+    border: transparent;
+    margin-top: 12%;
+    /* border-radius: 20px; */
+    padding-top: 47px;
+    padding-bottom: 70px;
 }
 
 .Hours h1 {
@@ -1170,13 +1180,13 @@ button#sidebarToggle {
 }
 
 .container.mapContainer {
-    background-color: rgba(165, 236, 151, 0.68);
+    background-color: rgb(255, 255, 255);
     border: transparent;
     margin-top: 5%;
     border-radius: 20px;
 }
 .Hours {
-    background-color: #f9e6ab;
+    background-color: rgb(241, 238, 195);
     border: solid;
     border: transparent;
     margin-top: 9%;
@@ -1261,7 +1271,7 @@ button#sidebarToggle {
 }
 
 .Hours {
-   background-color: rgba(244, 169, 169, 0.31);
+   /*background-color: rgba(244, 169, 169, 0.31);*/
     border: solid;
     border: transparent;
     margin-top: 12%;
@@ -1467,7 +1477,8 @@ table.table a {
 @media(min-width: 992px) {
     .panel.panel-default.cat {
         margin-top: 16%;
-        margin-bottom: 100vh;
+        /*margin-bottom: 100vh;*/
+        margin-bottom:37vh;
         text-align: center;
         /*margin-left: 11%;
     margin-right: 2%;*/
@@ -1557,4 +1568,15 @@ button.btn.btn.bg-primary.Back {
     background-color: rgba(72, 9, 18, 0.68);
     margin-top: 4%;
     margin-left: 4%;
+}
+
+.pageNum {
+    margin-left: 50%;
+    margin-top: -10%;
+}
+.searchOption {
+    margin-left: 5%;
+}
+.searchOption1 {
+    margin-left: 5%;
 }
