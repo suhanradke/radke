@@ -4,11 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+<button class="btn btn bg-primary Back" onclick="location.href='@Url.Action("Index", "FurnitureFront")'; return false;">Go Back</button>
 <div class="ProductBody">
     <div class="ProductContent">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-offset-1 col-md-3">
                 <div class="well second">
 
                     <img class="img-responsive productItem" src="~/Content/images/Furnitures/@(Model.Picture).jpg" width="250">
@@ -16,7 +16,7 @@
 
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="well first">
                     <h1>Name : @Model.Name</h1>
                     <h1>Category : </h1>

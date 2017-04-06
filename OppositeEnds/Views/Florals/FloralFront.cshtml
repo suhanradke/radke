@@ -9,15 +9,33 @@
 @{
     ViewBag.Title = "Florals";
 }
-<div class="container Florals1">
+<div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
-<div class="container Florals2">
-<div class="col-xs-12 col-md-12">
-    <div>
+   
+<div class="Florals2">
+@*<div class="col-xs-12 col-md-9">*@
+    <div class="row Break">
+        <div class="col-md-3 col-xs-12">
+
+            <div class="panel panel-default cat">
+                <div class="panel-heading">Florals</div>
+                <div class="panel-body">
+                    Birthday
+                </div>
+                <div class="panel-body">
+                    Wedding
+                </div>
+                <div class="panel-body">
+                    Valentine's
+                </div>
+                <div class="panel-body">
+                    Christmas
+                </div>
+            </div>
+        </div>
         @foreach (var florals in Model)
             {
-         
-            <div class="col-xs-12 col-md-3">
+<div class="col-xs-12 col-md-3">
                 <div class="thumbnail">
                     <a href="@Url.Action("productdetails","Florals",new {id= florals.Id})">
 
@@ -37,11 +55,11 @@
         
                
         }
+                
     </div>
-    </div>
-    </div>
-    <div class="row">
         </div>
     </div>
+   
+
 
 

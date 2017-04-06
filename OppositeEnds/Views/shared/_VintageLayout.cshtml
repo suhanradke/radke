@@ -22,46 +22,33 @@
     <link href="https://fonts.googleapis.com/css?family=Amarante" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 </head>
 <body id="VinBody">
     <div id="VintageBody">
-    <div id="wrap">
-        <nav class="navbar navbar-default">
+    <div id="wrapVin">
+        <nav class="navbar navVin-default">
             <div class="container-fluid" id="nav-fluid">
-                <div class="navbar-container">
-                    @*<div class="navbar-image">
-                        <img class="img-responsive" id="Logo" src="~/Content/Images/imagesforfrontend/12794508_762629533837893_1229437898244451512_n (1).jpg" />
-                    </div>*@
-                    <div class="nav-bar-text">
+                <div class="navVin-container">
+                    <div class="nav-Vin-text">
                         <h1 class="LogoVintage">Vintage Cafe@*<small>A Modern Mercantile </small>*@</h1>
 
                     </div>
                 </div>
-                @*<div class="motto-container">
-                    <div class="nav-bar-motto">
-                        <h6 class="motto-name">A Modern Mercantile</h6>
-                    </div>
-                </div>*@
-
-                <div class="navbar-header">
+              
+                 
+                <div class="navbar-header Vin">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    @*<div class="navbar-container">
-                        <div class="navbar-image">
-                            <img id="Logo" src="~/Content/Images/imagesforfrontend/12794508_762629533837893_1229437898244451512_n (1).jpg" />
-                        </div>
-                        <div class="nav-bar-text">
-                            <h1 class="LogoName">Opposite Ends</h1>
-                        </div>*@
-
-
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav navbar-right">
-                            @Html.Partial("_LoginPartial")
+                        <ul class="nav navbar-nav navbar-right Vin">
+                            <li>@Html.ActionLink("Opposite Ends", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Vintage Menu", "VintageIndex", "Home")</li>
+                            
                         </ul>
 
 
@@ -71,30 +58,9 @@
         </nav>
 
         <div class="VintageBodyContent">
-            <div class="row">
-                @if (Request.IsAuthenticated)
-            {
-                    <div class="row ok">
-                        <div class="col-sm-2" id="adminNav">
-                            @Html.Partial("_AdminNavBody")
-                            @*<h1>Head</h1>*@
-                        </div>
-
-                        <div class="col-sm-8">
+          
                             @RenderBody()
-                        </div>
-                    </div>
-
-                }
-                else
-                {
-                    @*<div class="col-sm-12">*@
-                   <div class="container">
-                        @RenderBody()
-                       </div>
-                        
-                    @*</div>*@
-                }
+                       
             </div>
         </div>
 
@@ -102,8 +68,7 @@
         <div class="content">
         </div>
     </div>
-        </div>
-
+        
     <footer id="myFooter">
         <div class="container">
             <div class="row">
