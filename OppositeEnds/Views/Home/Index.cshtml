@@ -80,7 +80,7 @@
                     {
                         <div class="col-md-4 col-lg-4 col-sm-12 @*hero-feature*@">
                             <div class="thumbnail one">
-                                <a href="@Url.Action("productdetails","florals",new {id= florals.Id})">
+                                <a href="@Url.Action("productdetails","florals",new {id= florals.FloralId})">
                                     <img class="img-responsive See" src="~/Content/images/florals/@(florals.Picture).jpg">
 
                                     <div class="caption one">
@@ -104,7 +104,7 @@
 
             <div class="Florals">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12">  
 
                         <h3 class="FloralTitle">Furnitures</h3>
                     </div>
@@ -115,7 +115,7 @@
                     {
                         <div class="col-md-4 col-lg-4 col-sm-12 @*hero-feature*@">
                             <div class="thumbnail one">
-                                <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.Id})">
+                                <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.FurnitureId})">
                                     <img class="img-responsive See" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
 
                                     <div class="caption one">
