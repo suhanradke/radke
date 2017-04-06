@@ -1,11 +1,24 @@
-﻿@model  IEnumerable<OppositeEnds.Models.Furniture>
- 
+﻿@model PagedList.IPagedList<OppositeEnds.Models.Furniture>
+@using PagedList.Mvc;
+@*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css"/>*@
 @{
     ViewBag.Title = "Furnitures";
 }
 
 <div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Furniture Section</h1>
+
+    @using (Html.BeginForm("Index", "FurnitureFront", FormMethod.Get))
+    {
+        <p>
+            Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+            <input type="submit" value="Search" />
+        </p>
+    }
+
+    @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+
+    @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
 
 <div class="Florals2">
     <div class="row Break">
@@ -51,6 +64,9 @@
         }
     </div>
 </div>
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+   new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 </div>
 
 
