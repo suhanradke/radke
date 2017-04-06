@@ -1,5 +1,5 @@
 ﻿@model OppositeEnds.ViewModels.storefrontitemsView
-    
+
 @{
     ViewBag.Title = "OppositeEnds";
 }
@@ -67,17 +67,14 @@
             </div>
 
 
+            <div class="Florals">
+                <div class="row">
+                    <div class="col-lg-12">
 
-
-            <div class="container">
-                <div class="container Florals">
-                    <div class="row">
-                        <div class="col-lg-12">
-
-                            <h3 class="FloralTitle">Florals</h3>
-                        </div>
+                        <h3 class="FloralTitle">Florals</h3>
                     </div>
-                <div class="container Florals3">
+                </div>
+
                 <div class="row text-center">
                     @foreach (var florals in Model.florals.Take(3))
                     {
@@ -90,89 +87,154 @@
                                         <h3>Name:@florals.Name</h3>
                                         <h3>Price:$@florals.Price</h3>
                                     </div>
-                               </a>
-                                     
-                                <p>
-                                    @*<a href="#" class="btn btn-primary">Buy Now!</a>*@
-                                </p>
+                                </a>
                             </div>
-                            </div>
-                         
-                        
+                        </div>
+
+
                     }
 
+                </div>
+
+            </div>
+
+            <br>
+            <br>
+
+
+            <div class="Florals">
+                <div class="row">
+                    <div class="col-lg-12">
+
+                        <h3 class="FloralTitle">Furnitures</h3>
                     </div>
                 </div>
-                </div>
-            <br>
-            <br>
 
-  <div class="container">
-      <div class="container Florals">
-          <div class="row">
-              <div class="col-lg-12">
-                  
-                      <h3 class="FloralTitle">Furnitures</h3>
+                <div class="row text-center">
+                    @foreach (var furnitures in Model.furnitures.Take(3))
+                    {
+                        <div class="col-md-4 col-lg-4 col-sm-12 @*hero-feature*@">
+                            <div class="thumbnail one">
+                                <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.Id})">
+                                    <img class="img-responsive See" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
 
-                  </div>
-              </div>
-              <div class="container Florals3">
-                  <div class="row text-center">
-                      @foreach (var furnitures in Model.furnitures.Take(3))
-            {
-                          <div class="col-md-4 col-lg-4 col-sm-12 @*hero-feature*@">
-                              <div class="thumbnail one">
-                                  <a href="@Url.Action("productdetails","FurnitureFront",new {id= furnitures.Id})">
-                                      <img class="img-responsive See" src="~/Content/images/Furnitures/@(furnitures.Picture).jpg">
-                                  </a>
-                                  <div class="caption">
-                                      <h3>@furnitures.Name</h3>
-                                      <p>
-                                          @*<a href="#" class="btn btn-primary">Buy Now!</a>*@ <a href="#" class="btn btn-default">More Info</a>
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
+                                    <div class="caption one">
+                                        <h3>@furnitures.Name</h3>
+                                        <h3>Price:$@furnitures.Price</h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
 
-                      }
-                    
-                   </div>
-                  </div>
 
-                                      </div>
-                                  </div>
-                <div class="container">
-                                  <div class="container MapColor">
-                                      <div class="row MapBody">
-                                          <div class="col-md-7">
-                                              <div class="container Hours">
-                                                  <h1>Store Hours</h1>
-                                                  <ul class="container">
-                                                      <li>  <a id="ABC">  Address : 651 Main St Woodville, MS 39669</a></li>
+                    }
 
-                                                      <li> <a id="ABC">Phone   : (601) 888-4300 </a></li>
-
-                                                      <li> <a id="ABC">Hours   : 10 A.M - 5 A.M </a></li>
-
-                                                  </ul>
-                                              </div>
-                                          </div>
-
-                                          <div class="col-md-5 Map">
-                                              <div id="map_canvas" @*style="width: 640px; height: 330px;"*@>
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
                 </div>
 
-        </div>
-        </div>
-   
-   
+            </div>
+            </div>
 
-       
-          
+        @*CArousel Try*@
+        @*<div class="container">
+
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3>
+                            Carousel Product Cart Slider
+                        </h3>
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Controls -->
+                        <div class="controls pull-right hidden-xs">
+                            <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic"
+                               data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic"
+                                                        data-slide="next"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                
+                                    @foreach (var florals in Model.florals.Take(3))
+                                    {
+                                        <div class="col-md-4 col-lg-4 col-sm-12"> 
+                                            <div class="thumbnail one">
+                                                <a href="@Url.Action("productdetails", "florals", new { id = florals.Id })">
+                                                    <img class="img-responsive See" src="~/Content/images/florals/@(florals.Picture).jpg">
+
+                                                    <div class="caption one">
+                                                        <h3>Name:@florals.Name</h3>
+                                                        <h3>Price:$@florals.Price</h3>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                
+                                </div>
+                            </div>*@
+                        @*<div class=item>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    @foreach (var florals in Model.florals.Take(3))
+                                    {
+                                       <div class="col-md-4 col-lg-4 col-sm-12 ">
+                                        <div class="thumbnail one">
+                                            <a href="@Url.Action("productdetails", "florals", new { id = florals.Id })">
+                                                <img class="img-responsive See" src="~/Content/images/florals/@(florals.Picture).jpg">
+
+                                                <div class="caption one">
+                                                    <h3>Name:@florals.Name</h3>
+                                                    <h3>Price:$@florals.Price</h3>
+                                                </div>
+                                            </a>
+                                        </div>
+                                            </div>
+                                    }
+                                    </div>
+                                </div>
+                            </div>*@
+
+
+                                @*Caoursel Try*@
+
+                                <div class="container mapContainer">
+
+                                    @*<div class="MapBody">*@
+                                    <div class="col-md-6">
+                                        <div class="Hours">
+
+                                            <h1>Store Hours</h1>
+                                            <ul>
+                                                <li>  <a id="ABC">  Address : 651 Main St Woodville, MS 39669</a></li>
+
+                                                <li> <a id="ABC">Phone   : (601) 888-4300 </a></li>
+
+                                                <li> <a id="ABC">Hours   : 10 A.M - 5 A.M </a></li>
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 Map">
+                                        <div id="map_canvas" @*style="width: 640px; height: 330px;"*@>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        @*</div>*@
+
+
+
+
+
+
 </body>
 

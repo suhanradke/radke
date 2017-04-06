@@ -3,11 +3,14 @@
 @{
     ViewBag.Title = "Index";
 }
+@section Scripts
+{
+    <script src="@Url.Content("~/js/site.js")"></script>
+}
 
-
-
-<p>
-    @Html.ActionLink("Create New", "Create")
+<button class="btn btn-primary" id="sidebarToggle">Hide Sidebar</button>
+<p class="Create1">
+    @Html.ActionLink("Create New", "Create") 
 </p>
 <div class="floral-index">
     <table class="table">
