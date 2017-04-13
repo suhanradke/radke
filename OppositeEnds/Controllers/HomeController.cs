@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using OppositeEnds.Models;
 using System.Data.Entity;
 using OppositeEnds.ViewModels;
+using System.IO;
 
 namespace OppositeEnds.Controllers
 {
@@ -48,6 +49,17 @@ namespace OppositeEnds.Controllers
 
 
             return View();
+        }
+        public ActionResult Show(int id)
+        {
+            // to do : Using the id passed in,build the path to your pdf file
+
+            var pathToTheFile = Server.MapPath("~/Content/VCmenu.pdf");
+            var fileStream = new FileStream(pathToTheFile,
+                                                FileMode.Open,
+                                                FileAccess.Read
+                                            );
+            return new FileStreamResult(fileStream, "application/pdf");
         }
     }
 }
