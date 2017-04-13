@@ -52,7 +52,7 @@ ul.nav.navbar-nav.navbar-right {
 }
 
 img#Logo {
-    width: 130px;
+    width: 100px;
 
 }
 
@@ -61,7 +61,7 @@ img#Logo {
 
 h1.LogoName {
     display: inline-block;
-   font-family: 'Amarante', cursive;
+  font-family: 'Dancing Script', cursive;
     font-size: 90px;
     padding-left: 15px;
      color: #f1eec3;
@@ -101,7 +101,7 @@ h1.LogoName {
     .navbar-header {
         padding-left: 20px;
         padding-top: 10px;
-        padding-bottom: 9px;
+        padding-bottom: 0px;
     }
 }
 
@@ -433,8 +433,12 @@ h5#headAdmin {
 /*Carousel*/
 
 .carousel {
-  height: 500px;
-  margin-bottom: 60px;
+    height: 429px;
+    margin-bottom: 5px;
+}
+
+div#myCarousel {
+    margin-top: -4%;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -442,18 +446,52 @@ h5#headAdmin {
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
+/*.carousel .item {
   height: 500px;
   background-color: #777;
-}
+}*/
+
 .carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 85%;
+    margin-left: 10%;
+    height: 360px;
 }
 
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 75%;
+    /*margin-left: 15%;*/
+    height: 418px;
+}
+
+
+/*.carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 85%;
+    margin-left: 7%;
+    height: 360px;
+}*/
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    /*height: auto;*/
+    height: 360px;
+    max-width: 85%;
+    line-height: 1;
+}
 .hero-feature {
     margin-bottom: 30px;
 }
@@ -481,13 +519,13 @@ div#adminNav {
     height: 105vh;
 }
 
-.carousel-inner1 > .item > img {
+/*.carousel-inner1 > .item > img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 80%;
   height: 500px;
-}
+}*/
 
 .background {
     background-image: url('Images/imagesforfrontend/vin1.jpg');
@@ -506,12 +544,12 @@ div#adminNav {
 }
 .nav-bar-motto{
     background-color: #480912;
-    width: 43%;
+    width: 20%
     /*height: 100px;*/
     margin: 10px;
 }
 
-.navbar-container{
+/*.navbar-container{
     display: -webkit-flex;
     display:flex;
     width:100%;
@@ -520,22 +558,48 @@ div#adminNav {
     background-color:rgb(72, 9, 18);
     justify-content: center;
 
+}*/
+
+.navbar-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 152px;
+    background-color: rgb(72, 9, 18);
+    justify-content: center;
 }
 
-.navbar-image{
+/*.navbar-image{
     background-color: rgb(72, 9, 18);
     width: 7%;
     margin: 10px;
     margin-top: 2%;
+}*/
+/*.navbar-image {
+    background-color: rgb(72, 9, 18);
+    width: 7%;
+    margin: 10px;
+    align-items: center;
+    margin-top: 4%;
+}*/
+
+.navbar-image {
+    background-color: rgb(72, 9, 18);
+    width: 7%;
+    margin: 10px;
+    align-items: center;
+    margin-top: 1%;
 }
 
 .navbar-header{
     width:100%;
+    margin-top: -3%;
+
 }
 
 @media screen and (max-width: 790px){
     h1.LogoName {
-    font-family: 'Amarante', cursive;
+  font-family: 'Dancing Script', cursive;
     font-size: 70px;
     padding-left: 15px;
         color: #f1eec3;
@@ -588,7 +652,8 @@ div#adminNav {
 @media screen and (max-width: 1400px) {
     .nav-bar-text {
         background-color: rgb(72, 9, 18);
-        width: 75%;
+        /*width: 75%;*/
+            width: 55%;
         height: 100px;
         margin: 10px;
     }
@@ -615,8 +680,7 @@ div#adminNav {
 
     h1.LogoName {
 
-
-        font-family: 'Amarante', cursive;
+       font-family: 'Dancing Script', cursive;
             font-size: 45px;
         padding-left: 15px;
         color: #f1eec3;
@@ -628,7 +692,6 @@ div#adminNav {
         display: flex;
         width: 100%;
         height: 90px;
-        align-items: center;
         background-color: rgb(72, 9, 18);
         justify-content: center;
     }
@@ -660,7 +723,8 @@ body {
   margin: 0 auto -60px;
   /* Pad bottom by footer height */
       
-  padding: 0 0 60px;
+  /*padding: 0 0 60px;*/
+  padding-bottom:60px;
   background-color: #f1eec3;
 
 }
@@ -814,7 +878,6 @@ h1.LogoVintage {
         display: flex;
         width: 100%;
         height: 50px;
-        align-items: center;
         background-color: rgb(72, 9, 18);
         justify-content: center;
     }
@@ -1579,4 +1642,16 @@ button.btn.btn.bg-primary.Back {
 }
 .searchOption1 {
     margin-left: 5%;
+}
+#adminList, li:hover {
+    background: #c79a9a;
+}
+li#headAdmin:hover {
+    background-color: transparent;
+}
+hr.lineHR {
+    /* color: black; */
+    border-color: black;
+    margin-left: -21%;
+    margin-right: -4%;
 }
