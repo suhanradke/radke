@@ -9,8 +9,26 @@
 @{
     ViewBag.Title = "Florals";
 }
+<div class="bodyContent">
 <div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
+
+    <div class="searchOption1">
+        @using (Html.BeginForm("Index", "Florals", FormMethod.Get))
+        {
+            <p>
+                Find by category: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                <input type="submit" value="Search" />
+            </p>
+        }
+    </div>
+    <div class="searchOption">
+        @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+
+        @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
+    </div>
+
+    @ViewBag.Message @ViewBag.Search
    
 <div class="Florals2">
 @*<div class="col-xs-12 col-md-9">*@
@@ -20,16 +38,24 @@
             <div class="panel panel-default cat">
                 <div class="panel-heading">Florals</div>
                 <div class="panel-body">
-                    Birthday
+                    <ul>
+                        <li>@Html.ActionLink("Birthday", "FloralFront", new { searchCategory = "Birthday", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>                    
                 </div>
                 <div class="panel-body">
-                    Wedding
+                    <ul>
+                        <li>@Html.ActionLink("Wedding", "FloralFront", new { searchCategory = "Wedding", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    Valentine's
+                    <ul>
+                        <li>@Html.ActionLink("Valentine's", "FloralFront", new { searchCategory = "Valentine's", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    Christmas
+                    <ul>
+                        <li>@Html.ActionLink("Christmas", "FloralFront", new { searchCategory = "Christmas", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -59,7 +85,7 @@
     </div>
         </div>
     </div>
-   
+   </div>
 
 
 

@@ -1,9 +1,9 @@
 ﻿using OppositeEnds.Models;
+using PagedList;
+using System;
 using System.Data.Entity;
-using System.IO;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace OppositeEnds.Controllers
@@ -14,7 +14,7 @@ namespace OppositeEnds.Controllers
         private OppositeEndsContext db = new OppositeEndsContext();
        
         [Authorize]
-        // GET: Florals
+        //GET: Florals
         public ActionResult Index()
         {
             return View(db.Florals.ToList());
@@ -130,17 +130,67 @@ namespace OppositeEnds.Controllers
 
         // GET: FloralFront
 
-        public ActionResult FloralFront()
-        {
-           var floral = db.Florals.ToList();
+        //public ActionResult FloralFront()
+        //{
+        //   var floral = db.Florals.ToList();
 
-            return View(floral);
+        //    return View(floral);
 
         
+        //}
+        public ActionResult FloralFront(string sortOrder, string currentFilter, string searchString, string searchCategory, int? page)
+        {
+            ViewBag.CurrentSort = sortOrder;
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.PriceSortParm = sortOrder == "Price" ? "Price_desc" : "Price";
+            if (searchString != null || searchCategory != null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+                searchCategory = currentFilter;
+            }
+
+            ViewBag.CurrentFilter = searchString;
+
+            var florals = from s in db.Florals
+                          select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                florals = florals.Where(s => s.Name.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(searchCategory))
+            {
+                florals = florals.Where(s => s.Category.Contains(searchCategory));
+                ViewBag.Message = "Search results for";
+                ViewBag.Search = searchCategory;
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    florals = florals.OrderByDescending(s => s.Name);
+                    break;
+                case "Price":
+                    florals = florals.OrderBy(s => s.Price);
+                    break;
+                case "Price_desc":
+                    florals = florals.OrderByDescending(s => s.Price);
+                    break;
+                default:
+                    florals = florals.OrderBy(s => s.Name);
+                    break;
+            }
+            int pageSize = 6;
+            int pageNumber = (page ?? 1);
+            return View(florals.ToPagedList(pageNumber, pageSize));
+
+
         }
 
         // GET: FloralFront
-        
+
         public ActionResult productdetails(int? id)
         {
             var florals = db.Florals.SingleOrDefault(c => c.FloralId == id);

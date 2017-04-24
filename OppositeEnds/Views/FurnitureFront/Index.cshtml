@@ -4,7 +4,7 @@
 @{
     ViewBag.Title = "Furnitures";
 }
-
+<div class="bodyContent">
 <div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Furniture Section</h1>
     
@@ -24,6 +24,9 @@
     @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
         </div>
 
+@ViewBag.Message @ViewBag.Search
+
+
 <div class="Florals2">
     <div class="row Break">
         <div class="col-md-3 col-xs-12">
@@ -32,16 +35,24 @@
             <div class="panel panel-default cat">
                 <div class="panel-heading">Furnitures</div>
                 <div class="panel-body">
-                    Dining
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index", new { searchCategory = "Home", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    Living
+                    <ul>
+                        <li>@Html.ActionLink("Dining", "Index", new { searchCategory = "Dining", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    Bed
+                    <ul>
+                        <li>@Html.ActionLink("Bed", "Index", new { searchCategory = "Bed", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
                 <div class="panel-body">
-                    Sofas
+                    <ul>
+                        <li>@Html.ActionLink("Sofas", "Index", new { searchCategory = "Sofas", currentFilter = ViewBag.CurrentFilter })</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -68,10 +79,12 @@
         }
     </div>
 </div>
+    </div>
     <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
     @Html.PagedListPager(Model, page => Url.Action("Index",
    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 </div>
+    </div>
 
 
 

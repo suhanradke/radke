@@ -25,18 +25,19 @@ namespace OppositeEnds.Controllers
 
         // GET: FurnitureFront
 
-        public ActionResult Index(string sortOrder, string currentFilter, string searchString, int? page)
+        public ActionResult Index(string sortOrder, string currentFilter, string searchString, string searchCategory, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewBag.PriceSortParm = sortOrder == "Price" ? "Price_desc" : "Price";
-            if (searchString != null)
+            if (searchString != null || searchCategory != null)
             {
                 page = 1;
             }
             else
             {
                 searchString = currentFilter;
+                searchCategory = currentFilter;
             }
 
             ViewBag.CurrentFilter = searchString;
@@ -45,8 +46,13 @@ namespace OppositeEnds.Controllers
                              select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                furnitures = furnitures.Where(s => s.Name.Contains(searchString)
-                                       || s.Category.Contains(searchString));
+                furnitures = furnitures.Where(s => s.Name.Contains(searchString));
+            }
+            if (!String.IsNullOrEmpty(searchCategory))
+            {
+                furnitures = furnitures.Where(s => s.Category.Contains(searchCategory));
+                ViewBag.Message = "Search results for";
+                ViewBag.Search = searchCategory;
             }
             switch (sortOrder)
             {
