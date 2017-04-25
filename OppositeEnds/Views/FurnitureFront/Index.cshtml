@@ -4,7 +4,7 @@
 @{
     ViewBag.Title = "Furnitures";
 }
-<div class="bodyContent">
+<div class="bodyContentFlorals">
 <div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Furniture Section</h1>
     
@@ -12,19 +12,21 @@
     <div class="searchOption1">
     @using (Html.BeginForm("Index", "FurnitureFront", FormMethod.Get))
     {
-        <p>
-            Find by category: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-            <input type="submit" value="Search" />
-        </p>
-    }
+        <div class="SeachLabel">
+          <label class="control-label">  Find by Name:  @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)</label>
+
+            <input type="submit" value="Search" class="btn btn-primary"/>
+        
         </div>
+    }
+        @*</div>
     <div class="searchOption">
     @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
 
     @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
-        </div>
+        </div>*@
 
-@ViewBag.Message @ViewBag.Search
+<div class="Searched"><p>@ViewBag.Message <span class="SearchedFor">@ViewBag.Search</span></p></div>
 
 
 <div class="Florals2">
@@ -80,10 +82,11 @@
     </div>
 </div>
     </div>
-    <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+    <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
     @Html.PagedListPager(Model, page => Url.Action("Index",
    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
-</div>
+
+    </div>
     </div>
 
 

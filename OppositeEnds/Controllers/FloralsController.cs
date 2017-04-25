@@ -154,6 +154,7 @@ namespace OppositeEnds.Controllers
             }
 
             ViewBag.CurrentFilter = searchString;
+            ViewBag.CurrentFilter = searchCategory;
 
             var florals = from s in db.Florals
                           select s;

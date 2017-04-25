@@ -1,15 +1,15 @@
-﻿
+﻿@model PagedList.IPagedList<OppositeEnds.Models.Floral>
+@using PagedList.Mvc;
+@*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css"/>*@
 
 @{
     ViewBag.Title = "FloralFront";
 }
 
-@model  IEnumerable<OppositeEnds.Models.Floral>
-
 @{
     ViewBag.Title = "Florals";
 }
-<div class="bodyContent">
+<div class="bodyContentFlorals">
 <div class="Florals1">
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
 
@@ -22,13 +22,8 @@
             </p>
         }
     </div>
-    <div class="searchOption">
-        @Html.ActionLink("Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
 
-        @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.PriceSortParm, currentFilter = ViewBag.CurrentFilter })
-    </div>
-
-    @ViewBag.Message @ViewBag.Search
+    <div class="Searched"><p>@ViewBag.Message <span class="SearchedFor">@ViewBag.Search</span></p></div>
    
 <div class="Florals2">
 @*<div class="col-xs-12 col-md-9">*@
@@ -84,6 +79,11 @@
                 
     </div>
         </div>
+    <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+   new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+
     </div>
    </div>
 
