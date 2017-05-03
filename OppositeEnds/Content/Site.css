@@ -1207,7 +1207,7 @@ button#sidebarToggle {
 }
 
 .container.mapContainer {
-    background-color: rgba(106, 84, 84, 0.24);
+    background-color: rgba(95, 106, 84, 0.14);
     border: transparent;
     margin-top: 5%;
     border-radius: 20px;
@@ -1930,4 +1930,51 @@ ul.hourStore {
 
 .panel-Category{
     padding:7px;
+}
+
+@media(min-width:1000px) {
+    div#myCarousel {
+    margin-top: -5%;
+}
+}
+
+table.table.CartTable {
+    border: solid;
+     border: solid;
+    width: 76%;
+    margin: auto;
+    background-color: white;
+}
+
+td.cartBody {
+    height: 45px;
+    border-bottom: solid;
+    color: mediumvioletred;
+    text-align: center;
+      border-left: solid;
+    background-color: rgba(179, 247, 188, 0.62);
+}
+
+tr.cartColumn {
+    height: 45px;
+    border-bottom: solid;
+    color: mediumvioletred;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+th.cartHead{
+    text-align: center;
+    border-left: solid;
+        font-size: 23px;
+}
+
+tr {
+    border-bottom: solid;
+    border-color: #a39179;
+    height: 44px;
+}
+table.table {
+    border: solid;
+    border-color: #a39179;
 }

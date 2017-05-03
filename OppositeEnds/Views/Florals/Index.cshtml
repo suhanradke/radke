@@ -54,10 +54,11 @@
                     @Html.DisplayFor(modelItem => item.Picture)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.FloralId }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.FloralId }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.FloralId })
-                </td>
+                    <div class="btn btn-primary">@Html.ActionLink("Edit", "Edit", new { id = item.FloralId })</div> |
+                    <div class="btn btn-primary">
+                        @Html.ActionLink("Details", "Details", new { id = item.FloralId })</div> |
+                    <div class="btn btn-primary">@Html.ActionLink("Delete", "Delete", new { id = item.FloralId })</div>
+</td>
             </tr>
         }
 

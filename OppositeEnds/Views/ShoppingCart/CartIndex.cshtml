@@ -8,58 +8,56 @@
     <script src="@Url.Content("~/js/site.js")"></script>
 }
 
-
-
-<button class="btn btn-primary" id="sidebarToggle">Hide Sidebar</button>
+<div class="bodyContent">
 <div class="floral-index">
-    <table class="table">
-        <tr>
-            <th>
+    <table class="table CartTable">
+        <tr class="cartColumn">
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.Type)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.Price)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.Quantity)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.Total)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.GrandTotal)
             </th>
-            <th>
+            <th class="cartHead">
                 @Html.DisplayNameFor(model => model.RemainingItem)
             </th>
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
+            <tr class="cartColumn">
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.Type)
                 </td>
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.Quantity)
                 </td>
 
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.Total)
                 </td> 
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.GrandTotal)
                 </td> 
-                <td>
+                <td class="cartBody">
                     @Html.DisplayFor(modelItem => item.RemainingItem)
                 </td> 
             </tr>
@@ -68,3 +66,4 @@
     </table>
 </div>
 
+</div>
