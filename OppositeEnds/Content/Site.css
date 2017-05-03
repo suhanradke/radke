@@ -1355,7 +1355,7 @@ button#sidebarToggle {
 
 ul.adminList, li a {
     text-align: center;
-    font-size: 22px;
+    font-size: 17px;
 }
 
 li#headAdmin {
@@ -1576,11 +1576,11 @@ ul.nav.navbar-nav.navbar-right.Vin a {
     color: #f1eec3;
 }
 
-btn.btn.btn-primary.Back {
-    /* color: #480912; */
-    background-color: rgba(55, 60, 72, 0.64);
-    margin-top: 3%;
-    margin-left: 3%;
+button.btn.btn.bg-primary.Back {
+    background-color: rgb(241, 238, 195);
+    margin-top: 4%;
+    margin-left: 4%;
+    font-size: 35px;
 }
 .row.Break {
     margin-right: 0px;
@@ -1595,7 +1595,7 @@ btn.btn.btn-primary.Back {
 }
 
 button.btn.btn.bg-primary.Back {
-    background-color: rgba(72, 9, 18, 0.68);
+    background-color: rgb(241, 238, 195);
     margin-top: 4%;
     margin-left: 4%;
 }
@@ -1608,7 +1608,6 @@ button.btn.btn.bg-primary.Back {
     margin-left: 5%;
 }
 .searchOption1 {
-    margin-left: 5%;
     margin-top: 25px;
 }
 /*#adminList, li:hover {
@@ -1708,7 +1707,7 @@ nav.navbar{
 
 
 .bodyContentFlorals {
-    padding-top: 234px;
+    padding-top: 218px;
 }
 .ProductBody {
     /* padding-top: 30%; */
@@ -1900,7 +1899,7 @@ a#ABC {
     /* margin-top: 10px; */
 }
 ul.hourStore {
-    margin-top: 8%;
+    margin-top: 2%;
 }
 .Hours h1 {
     font-family: Oregano, cursive;
@@ -1916,7 +1915,7 @@ ul.hourStore {
         /* font-family: 'Amarante', cursive; */
         font-size: 50px;
         color: #f1eec3;
-        margin-top: -3%;
+        margin-top: 3%;
     }
 }
 
@@ -1924,3 +1923,11 @@ ul.hourStore {
     margin-left: 51%;
 }
 
+.panel-body, ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.panel-Category{
+    padding:7px;
+}

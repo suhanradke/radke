@@ -4,8 +4,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<button class="btn btn bg-primary Back" onclick="location.href='@Url.Action("Index", "FurnitureFront")'; return false;">Go Back</button>
 <div class="ProductBody">
+    <button class="btn btn-lg bg-primary Back" onclick="location.href='@Url.Action("Index", "FurnitureFront")'; return false;"><span class="fa fa-arrow-left">  Back</span></button>
+
     <div class="ProductContent">
         <div class="row">
             <div class="col-md-offset-1 col-md-3">
