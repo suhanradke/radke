@@ -17,8 +17,8 @@
         @using (Html.BeginForm("Index", "Florals", FormMethod.Get))
         {
             <p>
-                Find by category: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-                <input type="submit" value="Search" />
+                <label>Find by category:</label> @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
+                <input type="submit" class="btn btn-primary" value="Search" />
             </p>
         }
     </div>
@@ -32,22 +32,22 @@
 
             <div class="panel panel-default cat">
                 <div class="panel-heading">Florals</div>
-                <div class="panel-body">
+                <div class="panel-Category">
                     <ul>
                         <li>@Html.ActionLink("Birthday", "FloralFront", new { searchCategory = "Birthday", currentFilter = ViewBag.CurrentFilter })</li>
                     </ul>                    
                 </div>
-                <div class="panel-body">
+                <div class="panel-Category">
                     <ul>
                         <li>@Html.ActionLink("Wedding", "FloralFront", new { searchCategory = "Wedding", currentFilter = ViewBag.CurrentFilter })</li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-Category">
                     <ul>
                         <li>@Html.ActionLink("Valentine's", "FloralFront", new { searchCategory = "Valentine's", currentFilter = ViewBag.CurrentFilter })</li>
                     </ul>
                 </div>
-                <div class="panel-body">
+                <div class="panel-Category">
                     <ul>
                         <li>@Html.ActionLink("Christmas", "FloralFront", new { searchCategory = "Christmas", currentFilter = ViewBag.CurrentFilter })</li>
                     </ul>
