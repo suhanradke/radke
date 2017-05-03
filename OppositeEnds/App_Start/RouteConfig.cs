@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace OppositeEnds
@@ -13,6 +9,11 @@ namespace OppositeEnds
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapRoute(
+        "Floralfront",
+           "Index/{searchCategory}",
+            new { controller = "Florals", action = "Index", searchCategory= UrlParameter.Optional }
+ );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -11,12 +11,14 @@ namespace OppositeEnds.Controllers
         private OppositeEndsContext db = new OppositeEndsContext();
 
         // GET: Furnitures
+        [Authorize]
         public ActionResult Index()
         {
             return View(db.furnitures.ToList());
         }
 
         // GET: Furnitures/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -32,6 +34,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Furnitures/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -55,6 +58,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Furnitures/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -86,6 +90,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Furnitures/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)

@@ -14,7 +14,7 @@
 <h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
 
     <div class="searchOption1">
-        @using (Html.BeginForm("Index", "Florals", FormMethod.Get))
+        @using (Html.BeginForm("FloralFront", "Florals", FormMethod.Get))
         {
             <p>
                 Find by category: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
@@ -69,6 +69,8 @@
                             <p>
                                 <b>Price:</b> <span>@florals.Price USD</span>
                             </p>
+                            <p>
+                                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = florals.FloralId, type = "floral" }, null)                            </p>
 
                         </div>
 </div>
@@ -80,7 +82,7 @@
     </div>
         </div>
     <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
-    @Html.PagedListPager(Model, page => Url.Action("Index",
+    @Html.PagedListPager(Model, page => Url.Action("FloralFront",
    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
 

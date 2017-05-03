@@ -1,4 +1,4 @@
-﻿
+﻿],li
 @using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
@@ -21,7 +21,7 @@ else
         <li>@Html.ActionLink("Furniture", "Index", "FurnitureFront")</li>
         <li>@Html.ActionLink("Vintage", "VintageIndex", "Home")</li>
         <li>@Html.ActionLink("SignIn", "SignIn", "Users")</li>
-        
+        <li>@Html.ActionLink("Cart", "CartIndex", "ShoppingCart")</li>
     </ul>
 
 }

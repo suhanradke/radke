@@ -21,9 +21,15 @@
                     <h1>Name : @Model.Name</h1>
                     <h1>Category : </h1>
                     <h1>Price : $ @Model.Price </h1>
+                    
                     <div class="row Goup">
                         <div class="col-sm-4"><h1>Details : </h1></div> <div class="col-sm-6 Cat"><h1>Here will be some information about the current item </h1></div>
                     </div>
+                    <p class="button">
+
+                        @*@Html.ActionLink("Pay with Paypal Account", "PaymentWithPaypal", "Paypal", new { amt = "13.05" }, null)*@
+                        @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.FurnitureId, type = "furniture" }, null)
+                    </p>
                 </div>
             </div>
         </div>

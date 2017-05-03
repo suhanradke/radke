@@ -21,6 +21,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Florals/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,6 +37,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Florals/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -46,7 +48,7 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Name,Price,Quantity,Category,Picture")] Floral floral)
         {
             if (ModelState.IsValid)
@@ -63,6 +65,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Florals/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +85,7 @@ namespace OppositeEnds.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "FloralId,Name,Price,Quantity,Details,Category,Picture")] Floral floral)
         {
             if (ModelState.IsValid)
@@ -94,6 +98,7 @@ namespace OppositeEnds.Controllers
         }
 
         // GET: Florals/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +116,7 @@ namespace OppositeEnds.Controllers
         // POST: Florals/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
             Floral floral = db.Florals.Find(id);

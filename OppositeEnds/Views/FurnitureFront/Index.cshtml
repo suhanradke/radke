@@ -74,6 +74,10 @@
                         <p>
                             <b>Price:</b> <span>@furnitures.Price USD</span>
                         </p>
+                        <p>
+                            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = furnitures.FurnitureId, type = "floral" }, null)
+                        </p>
+                   
 
                     </div>
                 </div>

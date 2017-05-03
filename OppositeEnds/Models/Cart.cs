@@ -20,6 +20,6 @@ namespace OppositeEnds.Models
 
         public virtual Floral Floral { get; set; }
 
-        public virtual Furniture furniture { get; set; }
+        public virtual Furniture Furniture { get; set; }
     }
 }
