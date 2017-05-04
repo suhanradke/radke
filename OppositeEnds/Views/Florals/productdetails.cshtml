@@ -25,18 +25,22 @@
                     </h1>
                     <h1>Price : $ @Model.Price </h1>
 
-                    <h1>Details : @Model.Details </h1>
+                    <div class="row Goup">
+                        <div class="col-sm-2"><h1>Details : </h1></div> <div class="col-sm-6 Cat">@Model.Details</div>
+                    </div>
                     @*<div class="row Goup">
-                        <div class="col-sm-4"><h1>Details : </h1></div> <div class="col-sm-6 Cat"><h1>Here will be some information about the current item </h1></div>
-                    </div>*@
-                    <p class="button">
+                <div class="col-sm-4"><h1>Details : </h1></div> <div class="col-sm-6 Cat"><h1>Here will be some information about the current item </h1></div>
+            </div>*@
 
-                        @*@Html.ActionLink("Pay with Paypal Account", "PaymentWithPaypal", "Paypal", new { amt = "13.05" }, null)*@
-                        @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.FloralId, type = "floral" }, null)
-                    </p>
+                    @*@Html.ActionLink("Pay with Paypal Account", "PaymentWithPaypal", "Paypal", new { amt = "13.05" }, null)*@
+                    <div class="btnBox">
+                        <btn class="btn btn-primary btn-lg Cart2">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.FloralId, type = "floral" }, null)
 
+                            </btn>
+                        </div>
+                    </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>

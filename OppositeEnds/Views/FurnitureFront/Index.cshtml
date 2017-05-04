@@ -74,12 +74,13 @@
                         <p>
                             <b>Price:</b> <span>@furnitures.Price USD</span>
                         </p>
-                        <p>
-                            @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = furnitures.FurnitureId, type = "floral" }, null)
-                        </p>
-                   
+                        
+                        <btn class="btn btn-primary btn-lg">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>  @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = furnitures.FurnitureId, type = "furniture" }, null)</btn>
 
-                    </div>
+
+
+</div>
                 </div>
             </div>
         }

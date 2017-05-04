@@ -180,6 +180,10 @@ namespace OppositeEnds.Models
         }
         // When a user has logged in, migrate their shopping cart to
         // be associated with their username
+
+
+
+    
         public void MigrateCart(string userName)
         {
             var shoppingCart = storeDB.Carts.Where(

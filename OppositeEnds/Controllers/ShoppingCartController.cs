@@ -10,30 +10,31 @@ namespace OppositeEnds.Controllers
     {
         OppositeEndsContext storeDB = new OppositeEndsContext();
         //
+
         List<ShoppingCartDetail> shoppingCartDetailsProductList = new List<ShoppingCartDetail>();
+
         // GET: /ShoppingCart/
         public ActionResult Index()
         {
 
-            //var cart = ShoppingCart.GetCart(this.HttpContext);
+            var cart = ShoppingCart.GetCart(this.HttpContext);
 
-            //// Set up our ViewModel
-            //var viewModel = new ShoppingCartViewModel
-            //{
-            //    CartItems = cart.GetCartItems(),
-            //    CartTotal = cart.GetTotal()
-            //};
-            // Return the view
-            /*return View(viewModell)*/;
-            return View(shoppingCartDetailsProductList);
+            // Set up our ViewModel
+            var viewModel = new ShoppingCartViewModel
+            {
+                CartItems = cart.GetCartItems(),
+                CartTotal = cart.GetTotal()
+            };
+           // Return the view
+           return View(viewModel);
+
         }
         //
         // GET: /Store/AddToCart/5
-        public ActionResult AddToCart(int id, string type)
+        public ActionResult AddToCart(int? id, string type)
         {
 
-            //List<ShoppingCartDetail> shoppingCartDetailsProductList = new List<ShoppingCartDetail>();
-
+            
             
 
             Furniture addedFurniture = new Furniture();
@@ -121,7 +122,7 @@ namespace OppositeEnds.Controllers
 
             // Go back to the main store page for more shopping
             //  return RedirectToAction("Index")
-            return View("CartIndex", shoppingCartDetailsProductList);
+            return View("CartIndex",shoppingCartDetailsProductList);
         }
 
       
@@ -156,6 +157,13 @@ namespace OppositeEnds.Controllers
                 DeleteId = id
             };
             return Json(results);
+        }
+
+        public ActionResult CartIndex()
+        {
+          
+
+            return View(shoppingCartDetailsProductList);
         }
         //
         // GET: /ShoppingCart/CartSummary
