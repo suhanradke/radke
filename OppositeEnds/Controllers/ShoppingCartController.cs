@@ -10,26 +10,29 @@ namespace OppositeEnds.Controllers
     {
         OppositeEndsContext storeDB = new OppositeEndsContext();
         //
+        List<ShoppingCartDetail> shoppingCartDetailsProductList = new List<ShoppingCartDetail>();
         // GET: /ShoppingCart/
         public ActionResult Index()
         {
-            var cart = ShoppingCart.GetCart(this.HttpContext);
 
-            // Set up our ViewModel
-            var viewModel = new ShoppingCartViewModel
-            {
-                CartItems = cart.GetCartItems(),
-                CartTotal = cart.GetTotal()
-            };
+            //var cart = ShoppingCart.GetCart(this.HttpContext);
+
+            //// Set up our ViewModel
+            //var viewModel = new ShoppingCartViewModel
+            //{
+            //    CartItems = cart.GetCartItems(),
+            //    CartTotal = cart.GetTotal()
+            //};
             // Return the view
-            return View(viewModel);
+            /*return View(viewModell)*/;
+            return View(shoppingCartDetailsProductList);
         }
         //
         // GET: /Store/AddToCart/5
         public ActionResult AddToCart(int id, string type)
         {
 
-            List<ShoppingCartDetail> shoppingCartDetailsProductList = new List<ShoppingCartDetail>();
+            //List<ShoppingCartDetail> shoppingCartDetailsProductList = new List<ShoppingCartDetail>();
 
             
 
@@ -121,10 +124,7 @@ namespace OppositeEnds.Controllers
             return View("CartIndex", shoppingCartDetailsProductList);
         }
 
-        public ActionResult CartIndex()
-        {
-            return View();
-        }
+      
         //
         // AJAX: /ShoppingCart/RemoveFromCart/5
         [HttpPost]

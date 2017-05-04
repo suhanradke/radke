@@ -1,9 +1,10 @@
-﻿@{
+﻿@model OppositeEnds.Models.Floral
+@{
     ViewBag.Title = "productdetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="ProductBody">
-  <button class="btn btn-lg bg-primary Back" onclick="location.href='@Url.Action("Index", "Florals")'; return false;"><span class="fa fa-arrow-left">  Back</span></button>
+    <button class="btn btn-lg bg-primary Back" onclick="location.href='@Url.Action("Index", "Florals")'; return false;"><span class="fa fa-arrow-left">  Back</span></button>
 
     <div class="ProductContent">
         <div class="row">
@@ -19,12 +20,15 @@
             <div class="col-md-7">
                 <div class="well first">
                     <h1>Name : @Model.Name</h1>
-                    <h1>Category : </h1>
-                    <h1>Price : $ @Model.Price </h1>                    
-                    
-                    <div class="row Goup">
+                    <h1>
+                        Category : @Model.Category
+                    </h1>
+                    <h1>Price : $ @Model.Price </h1>
+
+                    <h1>Details : @Model.Details </h1>
+                    @*<div class="row Goup">
                         <div class="col-sm-4"><h1>Details : </h1></div> <div class="col-sm-6 Cat"><h1>Here will be some information about the current item </h1></div>
-                    </div>
+                    </div>*@
                     <p class="button">
 
                         @*@Html.ActionLink("Pay with Paypal Account", "PaymentWithPaypal", "Paypal", new { amt = "13.05" }, null)*@

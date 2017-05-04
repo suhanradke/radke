@@ -2,7 +2,7 @@
 
 @*<div id="adminNav">*@
     @*<div class="sidebar-nav">*@
-<div class="bodyContent">
+@*<div class="bodyContent">
         <div class="model" role="navigation" >
             <div >
                 <ul class="adminList">
@@ -20,33 +20,27 @@
                    
                 </ul>
             </div>
+        </div>*@
+
+
+
+<div class="bodyContent">
+    <div class="panel panel-default Admin">
+        <div class="panel-body">
+            <ul>
+                <li>@Html.ActionLink("Florals", "Index", "Florals")</li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li>@Html.ActionLink("Furnitures", "Index", "Furnitures")</li>
+            </ul>
         </div>
 
-    @*<div class="panel panel-default cat">
-        <div class="panel-heading">Florals</div>
-        <div class="panel-body">
-            <ul>
-                <li>@Html.ActionLink("Birthday", "FloralFront", new { searchCategory = "Birthday", currentFilter = ViewBag.CurrentFilter })</li>
-            </ul>
-        </div>
-        <div class="panel-body">
-            <ul>
-                <li>@Html.ActionLink("Wedding", "FloralFront", new { searchCategory = "Wedding", currentFilter = ViewBag.CurrentFilter })</li>
-            </ul>
-        </div>
-        <div class="panel-body">
-            <ul>
-                <li>@Html.ActionLink("Valentine's", "FloralFront", new { searchCategory = "Valentine's", currentFilter = ViewBag.CurrentFilter })</li>
-            </ul>
-        </div>
-        <div class="panel-body">
-            <ul>
-                <li>@Html.ActionLink("Christmas", "FloralFront", new { searchCategory = "Christmas", currentFilter = ViewBag.CurrentFilter })</li>
-            </ul>
-        </div>
-    </div>*@
     </div>
-@*</div>*@
+    </div>
 
-   
-@*</div>*@
+    @*</div>*@
+
+
+    @*</div>*@

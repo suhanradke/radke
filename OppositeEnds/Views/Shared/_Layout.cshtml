@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/Footer-with-social-icons.css">
     <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @*<script src="~/Scripts/jquery-1.10.2.js"></script>*@
     
@@ -180,34 +181,22 @@
                             <li><a href="#">Downloads</a></li>
                         </ul>
                     </div>*@
-                <div class="col-sm-4 myCols">
+                <div class="col-sm-12 myCols">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a>
+@Html.ActionLink("Owner's Information", "Owner", "Home")</a></li>
+                        <li>
+                            <a>@Html.ActionLink("Developer's Information", "Developer", "Home")</a>
+                        </li>
+                        @*<li><a href="">Developer's information</a></li>*@
                     </ul>
                 </div>
-                <div class="col-sm-4 myCols">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 myCols">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+               
             </div>
         </div>
         <div class="social-networks">
-            <a href="https://www.facebook.com/oppositeendsllc/" class="facebook"><i class="fa fa-facebook-square"></i></i></a>
+            <a href="https://www.facebook.com/oppositeendsllc/" class="facebook"><i class="fa fa-facebook-square"></i></a>
             
         </div>
 

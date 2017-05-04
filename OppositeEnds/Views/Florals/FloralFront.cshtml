@@ -3,91 +3,89 @@
 @*<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css"/>*@
 
 @{
-    ViewBag.Title = "FloralFront";
-}
-
-@{
     ViewBag.Title = "Florals";
 }
 <div class="bodyContentFlorals">
-<div class="Florals1">
-<h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
+    <div class="Florals1">
+        <h1 id="TitleFlo" style="text-align:center">Welcome to our Florals Section</h1>
 
-    <div class="searchOption1">
-        @using (Html.BeginForm("FloralFront", "Florals", FormMethod.Get))
-        {
-            <p>
-                <label>Find by category:</label> @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)
-                <input type="submit" class="btn btn-primary" value="Search" />
-            </p>
-        }
-    </div>
-
-    <div class="Searched"><p>@ViewBag.Message <span class="SearchedFor">@ViewBag.Search</span></p></div>
-   
-<div class="Florals2">
-@*<div class="col-xs-12 col-md-9">*@
-    <div class="row Break">
-        <div class="col-md-3 col-xs-12">
-
-            <div class="panel panel-default cat">
-                <div class="panel-heading">Florals</div>
-                <div class="panel-Category">
-                    <ul>
-                        <li>@Html.ActionLink("Birthday", "FloralFront", new { searchCategory = "Birthday", currentFilter = ViewBag.CurrentFilter })</li>
-                    </ul>                    
-                </div>
-                <div class="panel-Category">
-                    <ul>
-                        <li>@Html.ActionLink("Wedding", "FloralFront", new { searchCategory = "Wedding", currentFilter = ViewBag.CurrentFilter })</li>
-                    </ul>
-                </div>
-                <div class="panel-Category">
-                    <ul>
-                        <li>@Html.ActionLink("Valentine's", "FloralFront", new { searchCategory = "Valentine's", currentFilter = ViewBag.CurrentFilter })</li>
-                    </ul>
-                </div>
-                <div class="panel-Category">
-                    <ul>
-                        <li>@Html.ActionLink("Christmas", "FloralFront", new { searchCategory = "Christmas", currentFilter = ViewBag.CurrentFilter })</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        @foreach (var florals in Model)
+        <div class="searchOption1">
+            @using (Html.BeginForm("FloralFront", "Florals", FormMethod.Get))
             {
-<div class="col-xs-12 col-md-3">
-                <div class="thumbnail">
-                    <a href="@Url.Action("productdetails","Florals",new {id= florals.FloralId})">
 
-                        <img class="img-responsive See" src="~/Content/images/florals/@(florals.Picture).jpg" width="200">
-                    </a>
-                        <div class="caption text-center">
-                            <p>
-                                <b>Name:</b> <span> @florals.Name</span>
-                            </p>
-                            <p>
-                                <b>Price:</b> <span>@florals.Price USD</span>
-                            </p>
-                            <p>
-                                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = florals.FloralId, type = "floral" }, null)                            </p>
-
-                        </div>
-</div>
-            </div>
-        
-               
-        }
-                
-    </div>
+                <div class="SeachLabel">
+                    <label class="control-label">Search By Name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)</label>
+                    <input type="submit" class="btn btn-primary" value="Search" />
+                    </div>
+            }
         </div>
-    <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
-    @Html.PagedListPager(Model, page => Url.Action("FloralFront",
+
+        <div class="Searched"><p>@ViewBag.Message <span class="SearchedFor">@ViewBag.Search</span></p></div>
+
+        <div class="Florals2">
+            @*<div class="col-xs-12 col-md-9">*@
+            <div class="row Break">
+                <div class="col-md-3 col-xs-12">
+
+                    <div class="panel panel-default cat">
+                        <div class="panel-heading">Florals</div>
+                        <div class="panel-Category">
+                            <ul>
+                                <li>@Html.ActionLink("Birthday", "FloralFront", new { searchCategory = "Birthday", currentFilter = ViewBag.CurrentFilter })</li>
+                            </ul>
+                        </div>
+                        <div class="panel-Category">
+                            <ul>
+                                <li>@Html.ActionLink("Wedding", "FloralFront", new { searchCategory = "Wedding", currentFilter = ViewBag.CurrentFilter })</li>
+                            </ul>
+                        </div>
+                        <div class="panel-Category">
+                            <ul>
+                                <li>@Html.ActionLink("Valentine", "FloralFront", new { searchCategory = "Valentine", currentFilter = ViewBag.CurrentFilter })</li>
+                            </ul>
+                        </div>
+                        <div class="panel-Category">
+                            <ul>
+                                <li>@Html.ActionLink("Christmas", "FloralFront", new { searchCategory = "Christmas", currentFilter = ViewBag.CurrentFilter })</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                @foreach (var florals in Model)
+            {
+                    <div class="col-xs-12 col-md-3">
+                        <div class="thumbnail">
+                            <a href="@Url.Action("productdetails","Florals",new {id= florals.FloralId})">
+
+                                <img class="img-responsive See" src="~/Content/images/florals/@(florals.Picture).jpg" width="200">
+                            </a>
+                            <div class="caption text-center">
+                                <p>
+                                    <b>Name:</b> <span> @florals.Name</span>
+                                </p>
+                                <p>
+                                    <b>Price:</b> <span>@florals.Price USD</span>
+                                </p>
+                                <p>
+                                    @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = florals.FloralId, type = "floral" }, null)
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+            </div>
+        </div>
+        <div class="pageNum">Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </div>
+        @Html.PagedListPager(Model, page => Url.Action("FloralFront",
    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
 
     </div>
-   </div>
+</div>
 
 
 

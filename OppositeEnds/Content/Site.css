@@ -38,7 +38,8 @@ ul.nav.navbar-nav.navbar-right {
     ul.nav.navbar-nav.navbar-right {
         padding-top: 50px;
         padding-bottom: 0px;
-        margin-bottom: 10px;
+        
+        in-bottom: 10px;
     }
 }
  
@@ -193,11 +194,13 @@ h1.LogoName {
     border-color: #480912;
 }
 
-.marg{
-    /*margin:3% 20% auto;*/
-    position:initial;
-    border-radius:3px;
-   border: 1px solid #480912;
+.marg {
+    position: initial;
+    border-radius: 3px;
+    width: 69%;
+    margin: auto;
+    border: 1px solid #480912;
+    margin-bottom: 60px;
 }
 .hie{
     top:50px;
@@ -296,8 +299,7 @@ input#SignIn {
 
 #myFooter .social-networks{
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 38px;
+    padding-bottom: 13px;
 }
 
 #myFooter .social-networks a{
@@ -515,12 +517,12 @@ label {
     margin-bottom: 5px;
     font-family: cursive;
     font-weight: bold;
-    margin-left: 4%;
+    /*margin-left: 4%;*/
 }
-div#adminNav {
+/*div#adminNav {
     background-color: #e3dbb4;
     height: 105vh;
-}
+}*/
 
 /*.carousel-inner1 > .item > img {
   position: absolute;
@@ -649,7 +651,7 @@ div#adminNav {
     h1.LogoName {
 
        font-family: 'Dancing Script', cursive;
-            font-size: 55px;
+            font-size: 40px;
         padding-left: 15px;
         color: #f1eec3;
         text-align: center;
@@ -956,8 +958,14 @@ h1.LogoVintage {
 }
 
 
+/*.Hours > ul, li, a {
+    font-family: cursive;
+
+}*/
+
 .Hours > ul, li, a {
     font-family: cursive;
+    text-align: center;
 }
 /*.container.Hours {
         background-color: #eaeaea;
@@ -1012,15 +1020,23 @@ a#ABC {
     color: #480912;
 }*/
 
-#TitleFlo {
+/*#TitleFlo {
     font-size: 31px;
-    padding-top: 5%;
+    padding-top: 21px;
     font-family: 'Amarante', cursive;
     color: #480912;
-        background-color: #f1eec3;
-        margin-top: 0;
-}
+    background-color: #f1eec3;
+    margin-top: 0;
+}*/
 
+#TitleFlo {
+    font-size: 25px;
+    padding-top: 21px;
+    font-family: 'Amarante', cursive;
+    color: #480912;
+    background-color: #f1eec3;
+    margin-top: 0;
+}
 
 /*.VinHeadcontent {
     background-image: url('Images/cafe/day-3522-night-cafe.jpg');
@@ -1224,21 +1240,24 @@ button#sidebarToggle {
 
 
 @media(max-width: 991px){
-   div#adminNav {
+   /*div#adminNav {
     background-color: #e3dbb4;
     height: 28vh;
-}
+}*/
 }
 
-@media(max-width: 991px) {
-    button#sidebarToggle {
-        margin-left: 42%;
-        margin-right: 42%;
-        padding: 10px 50px;
-        margin-top: 4%;
-        margin-bottom: 8%;
-    }
+@media(max-width: 991px){
+button#sidebarToggle {
+    margin-left: 42%;
+    margin-right: 42%;
+    padding: 10px 50px;
+    margin-top: 19px;
+    margin-bottom: 10px;
 }
+.Ovflowx {
+   padding-top: 0px;
+}
+                     }
 
 @media(min-width: 992px) {
     button#sidebarToggle {
@@ -1268,7 +1287,6 @@ button#sidebarToggle {
 }
 .form-group {
     margin-bottom: 15px;
-    margin-left: 40%;
 }
 
 /*.Map {
@@ -1353,10 +1371,12 @@ button#sidebarToggle {
     }
 }*/
 
-ul.adminList, li a {
+/*ul.adminList, li a {
     text-align: center;
-    font-size: 17px;
-}
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: bold;
+}*/
 
 li#headAdmin {
     font-size: 26px;
@@ -1605,10 +1625,33 @@ button.btn.btn.bg-primary.Back {
     margin-top: -10%;
 }
 .searchOption {
-    margin-left: 5%;
+    display: flex;
+    justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 68px 0px 0px;
 }
+/*.searchOption1 {
+    margin-top: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4em;
+}*/
+
 .searchOption1 {
-    margin-top: 25px;
+    margin-top: -15px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4em;
+}
+
+@media(min-width) {
+    .searchOption {
+
+        padding: 0px 24px 0px 0px;
+}
+
+
 }
 /*#adminList, li:hover {
     background: #c79a9a;
@@ -1645,7 +1688,7 @@ nav.navbar.shrink .navbar-container{
 
 nav.navbar.navbar-default.backgroundNav {
     background-image: url('Images/backgroundImage/vinyl.jpg');
-    background-size: cover;
+    background-size: 100%;
     transition: all 0.4s ease;
 }
 
@@ -1684,8 +1727,11 @@ nav.navbar{
     background-color: white;
 }
 
-.Ovflowx {
-    padding-top: 300px;
+
+@media(min-width:992px) {
+    .Ovflowx {
+        padding-top: 300px;
+    }
 }
 
 .Searched{
@@ -1734,7 +1780,7 @@ nav.navbar{
     color: #f1eec3;
     text-align: center;
     border-color: transparent;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 ul.nav.navbar-nav.navbar-right.Vin a:hover {
@@ -1792,10 +1838,10 @@ ul.nav.navbar-nav.navbar-right.Vin a:hover {
     transition: all 0.4s ease;
 }
     .bg1 {
-    margin-top: -30%;
+    margin-top: -49%;
 }
    nav.navbar.shrink .nav-bar-text h1.LogoName {
-    font-size: 45px;
+    font-size: 40px;
     transition: all 0.4s ease;
 }
 
@@ -1813,7 +1859,8 @@ ul.nav.navbar-nav.navbar-right.Vin a:hover {
         font-size: 75px;
         justify-content: center;
         margin-top: -18px;
-        height: 124px;
+        /*height: 124px;*/
+           height: 105px;
         transition: all 0.4s ease;
     }
 }
@@ -1824,10 +1871,17 @@ ul.nav.navbar-nav.navbar-right.Vin a:hover {
     }
 }
 
+
+@media(max-width:489px) {
+.FloralTitle {
+    font-size:34px;
+}
+}
+
 @media(max-width:750px) {
     .FloralTitle {
         text-align: center;
-        font-size: 45px;
+        font-size: 35px;
         font-family: Oregano, cursive;
         /* color: #e9e4bb; */
         color: #480912;
@@ -1949,18 +2003,20 @@ table.table.CartTable {
 td.cartBody {
     height: 45px;
     border-bottom: solid;
-    color: mediumvioletred;
+    color: black;
     text-align: center;
       border-left: solid;
-    background-color: rgba(179, 247, 188, 0.62);
+    background-color: floralwhite;
+     font-family: Oregano, cursive;
 }
 
 tr.cartColumn {
     height: 45px;
     border-bottom: solid;
-    color: mediumvioletred;
+    /* color: mediumvioletred; */
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgba(244, 244, 244, 0.78);
+    font-family: Oregano, cursive;
 }
 
 th.cartHead{
@@ -1977,4 +2033,226 @@ tr {
 table.table {
     border: solid;
     border-color: #a39179;
+}
+
+.cartTitle {
+    margin-left: 11%;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 50px;
+    font-family: Oregano, cursive;
+    position: static;
+}
+
+
+.floral-index {
+    padding-bottom: 7%;
+    overflow: auto;
+}
+
+.bodyCartContent {
+    padding-top: 277px;
+}
+
+@media(max-width:749){
+    
+    .bodyCartContent {
+    padding-top: 200px;
+
+}
+    .cartTitle {
+    margin-left: 109px;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: 34px;
+    font-family: Oregano, cursive;
+}
+}
+
+@media(max-width:750px){
+    .bodyContentFlorals {
+    padding-top:186px;
+}
+}
+
+@media(min-width:751px) {
+.bodyContentFlorals {
+    padding-top: 223px;
+}
+
+}
+
+@media(max-width: 488px){
+.bodyContentFlorals {
+    padding-top: 152px;
+}
+}
+
+@media (min-width: 768px) {
+    .bodyContentFlorals {
+      padding-top: 248px;
+    }
+}
+
+
+@media(max-width: 432px) {
+    .searchOption1 {
+        margin-top: 25px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 1em;
+
+    }
+}
+
+.containerSignIn {
+    width: 69%;
+    margin: auto;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    /* background-color: transparent; */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    /* color: red; */
+        background-color: #4a231f;
+}
+
+span.icon-bar {
+    color: black;
+    border-color: black;
+    background-color: #453b3b;
+}
+
+
+.navbar-toggle.Vin {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    /* background-color: transparent; */
+    border: 1px solid transparent;
+    border-radius: 4px;
+    /* color: red; */
+    background-color: #fca6a6;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.owner {
+    vertical-align: middle;
+    width: 313px;
+    /* width: 50%; */
+    /* margin: 0 auto; */
+    display: block;
+    margin: 0 auto;
+    border: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+}
+
+.bodyContent2 {
+    padding-top: 278px;
+}
+
+.owner-info {
+    width: 313px;
+    margin: auto;
+    color: black;
+     padding-top: 10px;
+}
+
+.OwnerList li {
+    font-size: 25px;
+    font-family: Oregano, cursive;
+    padding: 0px;
+}
+
+@media(max-width:750px){
+    .bodyContent2 {
+        padding-top: 226px;
+}
+}
+
+@media(min-width:750) {
+
+}
+
+
+
+@media(max-width:488px){
+    .containerSignIn {
+    width: 69%;
+    margin: auto;
+    margin-top: -146px;
+}
+
+    .Hours {
+    /* background-color: rgba(244, 169, 169, 0.31); */
+    border: solid;
+    border: transparent;
+    margin-top: 7%;
+    /* border-radius: 20px; */
+    padding-top: 10px;
+    /* padding-bottom: 95px; */
+    height: 450px;
+}
+    a#ABC {
+    font-size: 18px;
+    background-color: rgba(34, 2, 2, 0.63);
+    color: #f1eec3;
+    /* margin-top: 10px; */
+}
+    .Hours h1 {
+    font-family: Oregano, cursive;
+    /* font-family: 'Amarante', cursive; */
+    font-size: 39px;
+    color: #f1eec3;
+    margin-top: 3%;
+}
+    .caption, h3 {
+    color: black;
+    /* font-family: cursive; */
+    /* text-decoration: none; */
+    font-family: 'Amarante', cursive;
+    font-size: large;
+}
+}
+.CafeHours li {
+    text-align: center;
+    color: #fffff9;
+    font-size: 23px;
+}
+
+
+.panel.panel-default.OwnerInfo {
+    background-color: rgba(193, 193, 115, 0.39);
+}
+div#adminNav {
+    height: 100vh;
+    background-color: #a38c8c;
+}
+
+.panel-default.Admin {
+    border-color: #a38c8c;
+    background-color: #a38c8c;
+}
+
+@media(max-width:991px){
+    div#adminNav {
+    height: 40vh;
+    background-color: #a38c8c;
+ margin-bottom: 2%;
+}
+
+}
+
+.hide-sidebar, button#sidebarToggle {
+        margin-top: 0%;
 }

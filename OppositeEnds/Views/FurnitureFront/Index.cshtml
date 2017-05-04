@@ -13,7 +13,7 @@
     @using (Html.BeginForm("Index", "FurnitureFront", FormMethod.Get))
     {
         <div class="SeachLabel">
-          <label class="control-label">  Find by Name:  @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)</label>
+          <label class="control-label"> Search By Name:  @Html.TextBox("SearchString", ViewBag.CurrentFilter as string)</label>
 
             <input type="submit" value="Search" class="btn btn-primary"/>
         
@@ -28,7 +28,7 @@
 
 <div class="Searched"><p>@ViewBag.Message <span class="SearchedFor">@ViewBag.Search</span></p></div>
 
-
+</div>
 <div class="Florals2">
     <div class="row Break">
         <div class="col-md-3 col-xs-12">
@@ -91,7 +91,7 @@
    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
 
     </div>
-    </div>
+    
 
 
 

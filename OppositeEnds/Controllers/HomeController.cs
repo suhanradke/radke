@@ -44,6 +44,16 @@ namespace OppositeEnds.Controllers
 
             return View();
         }
+        public ActionResult Owner()
+        {
+            
+            return View();
+        }
+        public ActionResult Developer()
+        {
+
+            return View();
+        }
         public ActionResult VintageIndex()
         {
 

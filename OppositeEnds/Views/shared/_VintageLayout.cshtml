@@ -38,7 +38,7 @@
               
                  
                 <div class="navbar-header Vin">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle Vin collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -80,30 +80,16 @@
                             <li><a href="#">Downloads</a></li>
                         </ul>
                     </div>*@
-                <div class="col-sm-4 myCols">
+                <div class="col-sm-12 myCols">
                     <h5>About us</h5>
                     <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li>
+                            @Html.ActionLink("Owner's Informationt", "Owner", "Home")</a>
+                        </li>
+                        <li><a href="">Developer's information</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 myCols">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 myCols">
-                    <h5>Legal</h5>
-                    <ul>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
         <div class="social-networks">
